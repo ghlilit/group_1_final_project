@@ -46,6 +46,6 @@ class BookingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.require(:booking).permit(:bookstart, :bookend, :users_id, :rooms_id)
+      params.require(:booking).permit(:bookstart, :bookend, :user_id, :room_id)
     end
 end
