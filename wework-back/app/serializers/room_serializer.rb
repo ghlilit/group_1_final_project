@@ -1,4 +1,4 @@
 class RoomSerializer < ActiveModel::Serializer
-  attributes :id,:price,:setup,:capability
+  attributes :id,:price,:capability
   has_many :bookings
 end
