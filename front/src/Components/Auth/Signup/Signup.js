@@ -3,9 +3,9 @@ import React from 'react'
 class Signup extends React.Component {
   render() {
     return (
-        <div class="Sign">
+        <div className="Sign">
             <form className="form-signup">
-                <input type="text" id="inputName" className="form-control" placeholder="Name" required autofocus/>
+                <input type="text" id="inputName" className="form-control" placeholder="Name" required autoFocus/>
                 <input type="text" id="inputLastName" className="form-control" placeholder="Last Name" required/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required/>
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
