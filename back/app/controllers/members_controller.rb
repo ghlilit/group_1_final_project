@@ -1,6 +1,4 @@
 class MembersController < ApplicationController
-  before_action :set_member, only: [:show, :update, :destroy]
-
   # GET /members
   def index
     @members = Member.all
@@ -46,6 +44,6 @@ class MembersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def member_params
-      params.require(:member).permit(:role, :name, :description)
+      params.require(:member).permit(:role, :name, :email, :password, :password_confirmation)
     end
 end
