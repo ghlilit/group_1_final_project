@@ -10,8 +10,13 @@ class NavBar extends React.Component {
        <h3 className="masthead-brand">WeWork</h3>
        <nav className="nav nav-masthead justify-content-center">
          <a className="nav-link" href="/rooms">Rooms</a>
+         <a className="nav-link" href="/pricing">Pricing</a>
          <a className="nav-link" href="/about">About</a>
-         <div className="nav-link">Sign out</div>
+         <div className="nav-button">
+         <button class="btn btn-outline-light">
+            Sign out
+         </button>
+         </div>
        </nav>
      </div>
    </header>

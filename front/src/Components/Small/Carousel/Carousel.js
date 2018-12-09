@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Carousel.css'
 import premium from './img/premium.jpg'
 import catering from './img/catering.jpg'
 import events from './img/events.jpg'
-export default class Carousel extends Component {
-  render() {
-    return (
-        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+
+const Carousel = () => {
+  return (
+    <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -29,7 +29,7 @@ export default class Carousel extends Component {
               <div className="carousel-caption">
                 <h1>Premium membership</h1>
                 <p>Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.</p>
-                <p><a className="btn btn-lg btn-outline-light" href="mailto:lilit_ghandilyan@edu.aua.am?subject=Premium" role="button">Submit request</a></p>
+                <p><a className="btn btn-lg btn-outline-light" href="/pricing" role="button">Pricing</a></p>
               </div>
             </div>
           </div>
@@ -52,7 +52,8 @@ export default class Carousel extends Component {
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="sr-only">Next</span>
         </a>
-        </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default Carousel;

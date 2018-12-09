@@ -6,7 +6,7 @@ import Signup from './Components/Auth/Signup'
 import Home from './Components/Pages/Home'
 import About from './Components/Pages/About'
 import Rooms from './Components/Pages/Rooms'
-
+import Pricing from './Components/Pages/Pricing'
 
 class App extends Component {
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
           <Route path="/signup" component={Signup} />
           <Route path="/about" component={About} />
           <Route path="/rooms" component={Rooms} />
+          <Route path="/pricing" component={Pricing} />
           {/* <Route path="*" component={NotFound} /> */}
         </Switch>
       </Router>
