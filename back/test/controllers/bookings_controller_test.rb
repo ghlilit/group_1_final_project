@@ -12,7 +12,7 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create booking" do
     assert_difference('Booking.count') do
-      post bookings_url, params: { booking: { bookend: @booking.bookend, bookstart: @booking.bookstart, member_id: @booking.member_id, room_id: @booking.room_id } }, as: :json
+      post bookings_url, params: { booking: { bookend: @booking.bookend, bookstart: @booking.bookstart, room_id: @booking.room_id, user_id: @booking.user_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class BookingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update booking" do
-    patch booking_url(@booking), params: { booking: { bookend: @booking.bookend, bookstart: @booking.bookstart, member_id: @booking.member_id, room_id: @booking.room_id } }, as: :json
+    patch booking_url(@booking), params: { booking: { bookend: @booking.bookend, bookstart: @booking.bookstart, room_id: @booking.room_id, user_id: @booking.user_id } }, as: :json
     assert_response 200
   end
 

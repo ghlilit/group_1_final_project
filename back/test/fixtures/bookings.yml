@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bookstart: 2018-12-09 03:13:20
-  bookend: 2018-12-09 03:13:20
-  member: one
+  user: one
   room: one
+  bookstart: 2018-12-10 18:03:28
+  bookend: 2018-12-10 18:03:28
 
 two:
-  bookstart: 2018-12-09 03:13:20
-  bookend: 2018-12-09 03:13:20
-  member: two
+  user: two
   room: two
+  bookstart: 2018-12-10 18:03:28
+  bookend: 2018-12-10 18:03:28

@@ -9,8 +9,9 @@ class SessionsController < ApplicationController
     end
 
     def destroy
+        p current_member
+        p current_user
         @member = Member.where(id:params[:id]).first
-        p @member
         @member.authentication_token = nil
     end
 end

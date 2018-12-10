@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  mount_devise_token_auth_for 'User', at: 'auth'
   resources :desks
   resources :bookings
   resources :rooms
-  resources :members, only: [:create,:index, :show, :update, :destroy]
-  resources :sessions, only: [:create, :destroy]
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
