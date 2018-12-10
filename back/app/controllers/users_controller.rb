@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
+    p user_signed_in?
     @users = User.all
-
     render json: @users
   end
 
