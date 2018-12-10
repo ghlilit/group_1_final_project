@@ -3,18 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-<<<<<<< HEAD
-    p user_signed_in?
     @users = User.all
     render json: @users
-=======
-   if  @user.admin?
-      @users = User.all
-      render json: @users
-   else
-     render json: status: :unauthorized
-   end  
->>>>>>> 880a820622fda40ecca89b5832df0d0373e3e54a
   end
 
   # GET /users/1
@@ -35,7 +25,6 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.admin?
        @user.update(user_params)
        render json: @user
     else
