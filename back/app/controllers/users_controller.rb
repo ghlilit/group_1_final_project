@@ -3,9 +3,12 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
-
-    render json: @users
+   if  @user.admin?
+      @users = User.all
+      render json: @users
+   else
+     render json: status: :unauthorized
+   end  
   end
 
   # GET /users/1
@@ -26,12 +29,14 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
-      render json: @user
+    if @user.admin?
+       @user.update(member_params)
+       render json: @user
     else
-      render json: @user.errors, status: :unprocessable_entity
+      render json: status: :unauthorized
     end
   end
+  
 
   # DELETE /users/1
   def destroy
