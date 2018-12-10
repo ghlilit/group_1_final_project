@@ -34,7 +34,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img className="third-slide" src={events}/>
+            <img className="third-slide" src={events} alt="Third slide"/>
             <div className="container">
               <div className="carousel-caption text-right">
                 <h1>Special events</h1>

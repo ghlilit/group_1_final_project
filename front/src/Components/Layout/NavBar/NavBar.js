@@ -13,7 +13,7 @@ class NavBar extends React.Component {
          <a className="nav-link" href="/pricing">Pricing</a>
          <a className="nav-link" href="/about">About</a>
          <div className="nav-button">
-         <button class="btn btn-outline-light">
+         <button className="btn btn-outline-light">
             Sign out
          </button>
          </div>
