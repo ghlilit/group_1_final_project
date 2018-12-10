@@ -12,7 +12,7 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create room" do
     assert_difference('Room.count') do
-      post rooms_url, params: { room: { capacity: @room.capacity, price: @room.price, setup: @room.setup } }, as: :json
+      post rooms_url, params: { room: { capacity: @room.capacity, name: @room.name, price: @room.price } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update room" do
-    patch room_url(@room), params: { room: { capacity: @room.capacity, price: @room.price, setup: @room.setup } }, as: :json
+    patch room_url(@room), params: { room: { capacity: @room.capacity, name: @room.name, price: @room.price } }, as: :json
     assert_response 200
   end
 
