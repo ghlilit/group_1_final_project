@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
+    p user_signed_in?
     @users = User.all
     render json: @users
   end
@@ -27,9 +28,6 @@ class UsersController < ApplicationController
   def update
        @user.update(user_params)
        render json: @user
-    else
-      render json: status: :unauthorized
-    end
   end
   
 
