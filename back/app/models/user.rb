@@ -1,8 +1,8 @@
 class User < ApplicationRecord
 
- def admin?
-  return current_user.role == 'admin'
- end
+#  def admin?
+#   return current_user.role == 'admin'
+#  end
 # Include default devise modules.
  validates :role, presence: true
  has_many :bookings, dependent: :destroy
