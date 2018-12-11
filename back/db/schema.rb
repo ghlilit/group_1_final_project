@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_210957) do
+ActiveRecord::Schema.define(version: 2018_12_10_221855) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -31,8 +31,14 @@ ActiveRecord::Schema.define(version: 2018_12_11_210957) do
     t.index ["user_id"], name: "index_desks_on_user_id"
   end
 
-# Could not dump table "rooms" because of following StandardError
-#   Unknown type 'capacity' for column 'integer'
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.integer "capacity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "setup"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false

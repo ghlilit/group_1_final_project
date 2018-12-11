@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, except:[:index]
   before_action :set_booking, only: [:show, :update, :destroy]
 
   # GET /bookings
@@ -42,7 +43,9 @@ class BookingsController < ApplicationController
     def set_booking
       @booking = Booking.find(params[:id])
     end
-
+    def check_premium
+      return current_user.role === "premium"
+    end
     # Only allow a trusted parameter "white list" through.
     def booking_params
       params.require(:booking).permit(:user_id, :room_id, :bookstart, :bookend)
