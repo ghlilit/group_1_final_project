@@ -56,14 +56,16 @@ color: white;
 }
 .nav-button{
   font-weight: 700;
-  margin-left: 1rem;
+  margin-right: 0.8rem;
+  margin-left: 1.2rem;
+  margin-top: 0.55rem;
 }
 .nav-main{
   font-weight: 800;
   font-size: calc(10px + 2vmin);
 }
 .nav-masthead .nav-link {
-padding: .50rem 0 0 0;
+padding: .90rem 0 0 0;
 font-weight: 700;
 color: rgba(255, 255, 255, .5);
 background-color: transparent;
