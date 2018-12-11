@@ -1,11 +1,14 @@
 import React from 'react'
 import getImage from './getImage'
+import '../RoomPopup'
 import './Room.css'
+import RoomPopup from '../RoomPopup';
 
 export default class Room extends React.Component {
 
   render() {
     let img = getImage(this.props.id);
+    console.log(this.props.capacity)
     const position = (this.props.id % 2 === 0 ? "col-md-7" : "col-md-7 order-md-2")
     return (
       <div>
@@ -20,7 +23,7 @@ export default class Room extends React.Component {
                       <p> ✓ For max. <strong>{this.props.capacity} people</strong></p>
                       <p> ✓ Room setup: <strong>{this.props.setup}</strong></p>
                       <div class = "balanced-button">
-                        <button class = "btn btn-outline-dark">Reserve</button>
+                       <RoomPopup name = {this.props.name} />
                       </div>
                     </div>
                 </div>

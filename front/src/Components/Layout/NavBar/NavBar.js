@@ -4,7 +4,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column gray-navbar">
+      <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
      <div className="inner">
      <a class="navbar-brand nav-main" href="#">WeWork</a>
