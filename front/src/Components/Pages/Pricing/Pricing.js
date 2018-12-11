@@ -56,7 +56,7 @@ const Pricing = () => {
             </div>
             </div>
         </div>
-            <a className ="btn btn-dark btn-lg" href="mailto:lilit_ghandilyan@edu.aua.am?subject=Membership" role="button">Get in touch
+            <a className ="btn btn-outline-dark btn-lg" href="mailto:lilit_ghandilyan@edu.aua.am?subject=Membership" role="button">Get in touch
             </a>
         </div>
     </div>

@@ -58,6 +58,10 @@ color: white;
   font-weight: 700;
   margin-left: 1rem;
 }
+.nav-main{
+  font-weight: 800;
+  font-size: calc(10px + 2vmin);
+}
 .nav-masthead .nav-link {
 padding: .50rem 0 0 0;
 font-weight: 700;

@@ -7,7 +7,7 @@ class NavBar extends React.Component {
       <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
      <div className="inner">
-       <h3 className="masthead-brand">WeWork</h3>
+     <a class="navbar-brand nav-main" href="#">WeWork</a>
        <nav className="nav nav-masthead justify-content-center">
          <a className="nav-link" href="/rooms">Rooms</a>
          <a className="nav-link" href="/pricing">Pricing</a>
