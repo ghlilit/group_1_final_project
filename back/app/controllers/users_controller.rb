@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     # if @user.admin?
       #  get_current_user
-      p user_signed_in?
+      # p user_signed_in?
        @users = User.all
        render json: @users
     # else
