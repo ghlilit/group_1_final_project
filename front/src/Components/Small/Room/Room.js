@@ -8,6 +8,7 @@ export default class Room extends React.Component {
 
   render() {
     let img = getImage(this.props.id);
+    console.log(this.props.capacity)
     const position = (this.props.id % 2 === 0 ? "col-md-7" : "col-md-7 order-md-2")
     return (
       <div>

@@ -31,6 +31,7 @@ getRooms = async() =>{
 
   render() {
     const {data} = this.state;
+    console.log(data);
     return (
       <div>
         <NavBar />
