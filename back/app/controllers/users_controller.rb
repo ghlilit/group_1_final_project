@@ -1,16 +1,15 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+before_action :authenticate_user!
+before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
-    # if @user.admin?
-      #  get_current_user
-      # p user_signed_in?
+    if check_admin
        @users = User.all
        render json: @users
-    # else
-    #    render json: status: :anauthorized
-    # end 
+    else
+       render json:{}, status: 401
+    end 
   end
 
   # GET /users/1
@@ -31,12 +30,12 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    # if @user.admin?
+    if check_admin
        @user.update(user_params)
        render json: @user
-  #   else
-  #      render json: anauthorized
-  #  end
+    else
+       render json:{}, status:401
+   end
  end
 
   # DELETE /users/1
@@ -50,6 +49,9 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def check_admin
+      return current_user.role == "admin"
+    end
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:fname, :lname, :role)
