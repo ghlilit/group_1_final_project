@@ -3,9 +3,12 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    p user_signed_in?
-    @users = User.all
-    render json: @users
+    if @user.admin?
+       @users = User.all
+       render json: @users
+    else
+       render json: status: :anauthorized
+    end 
   end
 
   # GET /users/1
@@ -26,10 +29,13 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
+    if @user.admin?
        @user.update(user_params)
        render json: @user
-  end
-  
+    else
+       render json: anauthorized
+   end
+ end
 
   # DELETE /users/1
   def destroy
