@@ -1,6 +1,8 @@
 import React from 'react'
 import getImage from './getImage'
+import '../RoomPopup'
 import './Room.css'
+import RoomPopup from '../RoomPopup';
 
 export default class Room extends React.Component {
 
@@ -20,7 +22,7 @@ export default class Room extends React.Component {
                       <p> ✓ For max. <strong>{this.props.capacity} people</strong></p>
                       <p> ✓ Room setup: <strong>{this.props.setup}</strong></p>
                       <div class = "balanced-button">
-                        <button class = "btn btn-outline-dark">Reserve</button>
+                       <RoomPopup name = {this.props.name} />
                       </div>
                     </div>
                 </div>
