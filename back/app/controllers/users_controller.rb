@@ -3,12 +3,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-   if  @user.admin?
       @users = User.all
       render json: @users
-   else
-     render json: status: :unauthorized
-   end  
   end
 
   # GET /users/1
@@ -29,11 +25,10 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.admin?
-       @user.update(member_params)
+    if @user.update(user_params)
        render json: @user
     else
-      render json: status: :unauthorized
+      render json: @user.errors, status: :unprocessable_entity
     end
   end
   
