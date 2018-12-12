@@ -17,3 +17,13 @@ Timespot.create(
     {hours: "17:00 - 18:00" },
     {hours: "18:00 - 19:00" },
     {hours: "19:00 - 20:00" },])
+
+User.create(
+    [{fname: "Lilit", lname: "Ghandilyan", email:"lilit.ghandilyan@mail.com", role:"admin", password:"seedpassword", password_confirmation:"seedpassword"},
+])
+
+Booking.create(
+    [{user_id: 1, room_id: 1, timespot_id: 5, book_date: "2018-12-13T20:00:00.000Z"},
+    {user_id: 1, room_id: 1, timespot_id: 6, book_date:"2018-12-13T20:00:00.000Z"},
+    {user_id: 1, room_id: 1, timespot_id: 3, book_date:"2018-12-13T20:00:00.000Z"},
+])
