@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_221855) do
+ActiveRecord::Schema.define(version: 2018_12_12_122039) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "room_id"
-    t.datetime "bookstart"
-    t.datetime "bookend"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "timespot_id"
+    t.datetime "book_date"
     t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["timespot_id"], name: "index_bookings_on_timespot_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -38,6 +39,10 @@ ActiveRecord::Schema.define(version: 2018_12_10_221855) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "setup"
+  end
+
+  create_table "timespots", force: :cascade do |t|
+    t.string "hours"
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,9 +5,9 @@ class Cover extends React.Component {
     return (
         <div>
          <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column gray-navbar">
-        <header className="masthead mb-auto ">
-        <div className="inner">
-          <h3 className="masthead-brand">WeWork</h3>
+        <header className="masthead mb-auto container">
+        <div className="inner container">
+        <a class="navbar-brand nav-main" href="/">WeWork</a>
           <nav className="nav nav-masthead justify-content-center">
             <a className="nav-link" href="/signup">Sign up</a>
             <a className="nav-link" href="/signin">Sign in</a>
@@ -15,7 +15,7 @@ class Cover extends React.Component {
         </div>
       </header>
       </div>
-      <div className = "Custom lower-height"> 
+      <div className = "Custom lower-height-cover"> 
         <main role="main" className=" inner cover">
             <h1 className="cover-heading">Welcome to WeWork</h1>
             <p className="lead">WeWork is a full service, creative working environment with a unique entrepreneurial spirit.</p>

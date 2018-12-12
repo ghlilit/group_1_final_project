@@ -3,6 +3,14 @@ import React from 'react'
 class Signup extends React.Component {
   render() {
     return (
+     <div >
+        <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
+            <header className="masthead mb-auto">
+                <div className="inner container">
+                    <a class="navbar-brand nav-main" href="/">WeWork</a>
+                </div>
+            </header>
+   </div>
         <div className="Sign">
             <form className="form-signup">
                 <input type="text" id="inputName" className="form-control" placeholder="Name" required autoFocus/>
@@ -13,6 +21,7 @@ class Signup extends React.Component {
                 <br />
                 <button className="btn btn-lg btn-block btn-secondary" type="submit">Sign up</button>
             </form>
+        </div>
         </div>
     )
   }

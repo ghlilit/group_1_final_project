@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
+  get 'timespots', to: 'timespots#index'
   resources :desks
   resources :bookings
   resources :rooms

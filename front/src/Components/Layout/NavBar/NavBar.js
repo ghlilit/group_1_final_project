@@ -6,8 +6,8 @@ class NavBar extends React.Component {
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
-     <div className="inner">
-     <a class="navbar-brand nav-main" href="#">WeWork</a>
+     <div className="inner container">
+     <a className="navbar-brand nav-main" href="/rooms">WeWork</a>
        <nav className="nav nav-masthead justify-content-center">
          <a className="nav-link" href="/rooms">Rooms</a>
          <a className="nav-link" href="/pricing">Pricing</a>

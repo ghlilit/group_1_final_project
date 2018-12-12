@@ -31,7 +31,6 @@ getRooms = async() =>{
 
   render() {
     const {data} = this.state;
-    console.log(data);
     return (
       <div>
         <NavBar />
@@ -39,6 +38,7 @@ getRooms = async() =>{
         <div className = "container">
             {data.map((room, index) => 
               <Room 
+              key = {room.name + room.id}
               id = {index + 1}
               name = {room.name}
               price = {room.price}

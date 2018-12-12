@@ -8,7 +8,6 @@ export default class Room extends React.Component {
 
   render() {
     let img = getImage(this.props.id);
-    console.log(this.props.capacity)
     const position = (this.props.id % 2 === 0 ? "col-md-7" : "col-md-7 order-md-2")
     return (
       <div>
@@ -22,8 +21,8 @@ export default class Room extends React.Component {
                       <p> ✓ Per hour <strong>{this.props.price}$</strong></p>
                       <p> ✓ For max. <strong>{this.props.capacity} people</strong></p>
                       <p> ✓ Room setup: <strong>{this.props.setup}</strong></p>
-                      <div class = "balanced-button">
-                       <RoomPopup name = {this.props.name} />
+                      <div className = "balanced-button">
+                       <RoomPopup name = {this.props.name} id = {this.props.id}/>
                       </div>
                     </div>
                 </div>
