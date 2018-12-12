@@ -27,8 +27,9 @@ class RoomPopup extends React.Component {
       }
     
       handleDateChange = date => {
+        const noTimeDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
         this.setState({ 
-          selectedDate: date,
+          selectedDate: noTimeDate,
           timeSelector: true});
           this.getTimespots();
           console.log(this.state.timespots);
@@ -50,8 +51,9 @@ class RoomPopup extends React.Component {
 
   render() {
     const today = new Date();
-    const nextYear = new Date(today.getTime() + 31 * 24 * 60 * 60 * 1000);
+    const nextMonth = new Date(today.getTime() + 31 * 24 * 60 * 60 * 1000);
     const { selectedDate } = this.state;
+    console.log(selectedDate);
     return (
       <div>
         <Popup trigger={ <button className = "btn btn-outline-dark" onClick = {this.handlePopup}>Reserve</button>} modal>
@@ -60,7 +62,7 @@ class RoomPopup extends React.Component {
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <DatePicker value={selectedDate}
              onChange={this.handleDateChange}
-             maxDate = {nextYear}
+             maxDate = {nextMonth}
              disablePast />
               </MuiPickersUtilsProvider>
                  {this.state.timeSelector && (<div className="dropdown">

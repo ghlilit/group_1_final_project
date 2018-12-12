@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!, except:[:index]
+  before_action :authenticate_user!, except:[:index, :search]
   before_action :set_booking, only: [:show, :update, :destroy]
 
   # GET /bookings
@@ -9,9 +9,9 @@ class BookingsController < ApplicationController
   end
 
   # GET /bookings/1
-  def show
-    render json: @booking
-  end
+  # def show
+  #   render json: @booking
+  # end
 
   # POST /bookings
   def create
@@ -38,6 +38,12 @@ class BookingsController < ApplicationController
     @booking.destroy
   end
 
+  def search
+    @bookings = Booking.where(room_id: params[:room_id], book_date: params[:book_date])
+    render json: @bookings
+    #
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
@@ -48,6 +54,6 @@ class BookingsController < ApplicationController
     end
     # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.require(:booking).permit(:user_id, :room_id, :bookstart, :bookend)
+      params.require(:booking).permit(:user_id, :room_id, :bookdate, :timespot_id)
     end
 end
