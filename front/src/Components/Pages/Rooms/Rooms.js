@@ -3,6 +3,7 @@ import './Rooms.css'
 import NavBar from "../../Layout/NavBar"
 import Carousel from "../../Small/Carousel"
 import Room from "../../Small/Room"
+import Footer from '../../Layout/Footer';
 const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
@@ -48,6 +49,7 @@ getRooms = async() =>{
             }
           <hr className="featurette-divider"/>
         </div>
+        <Footer />
       </div>
     )
   }
