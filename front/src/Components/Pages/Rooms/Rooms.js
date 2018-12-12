@@ -19,11 +19,12 @@ getRooms = async() =>{
     try {
       let result = await fetch(ROOMS);
       data = await result.json();
-    } catch (error) {
-      }
-      this.setState({
-        data,
-      })
+    } 
+    catch (error) {
+    }
+    this.setState({
+      data,
+    })
   }
 
   componentDidMount = () => {

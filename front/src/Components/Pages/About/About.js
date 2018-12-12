@@ -3,6 +3,10 @@ import React from 'react'
 class About extends React.Component {
   render() {
     return (
+        <div>
+        <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
+        <a className="navbar-brand nav-main" href="/rooms">WeWork</a>
+        </div>
         <div className = "Custom default-height"> 
             <main role="main" className="container inner cover">
                 <h1 className="Central cover-heading">Who we are</h1>
@@ -15,6 +19,7 @@ class About extends React.Component {
                 <p className = "Central"><strong>WeWork. Your place to work.</strong></p> 
                 </div>
             </main>
+        </div>
         </div>
     )
   }

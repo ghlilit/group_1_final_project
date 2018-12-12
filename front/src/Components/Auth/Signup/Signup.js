@@ -10,7 +10,7 @@ class Signup extends React.Component {
                     <a class="navbar-brand nav-main" href="/">WeWork</a>
                 </div>
             </header>
-   </div>
+     </div>
         <div className="Sign">
             <form className="form-signup">
                 <input type="text" id="inputName" className="form-control" placeholder="Name" required autoFocus/>
