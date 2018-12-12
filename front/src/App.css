@@ -20,6 +20,10 @@
   color: white;
 }
 
+.address-bar{
+  margin-left: 100min;
+}
+
 .default-height{
   min-height: 100vh;
 }
@@ -31,7 +35,9 @@
 /*
 * Globals
 */
-
+custom-a {
+  color: #000;
+}
 /* Links */
 a,
 a:focus,
