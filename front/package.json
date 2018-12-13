@@ -8,6 +8,7 @@
     "date-fns": "^2.0.0-alpha.25",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-pickers": "^2.0.4",
+    "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",

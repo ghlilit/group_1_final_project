@@ -8,6 +8,7 @@ import About from './Components/Pages/About'
 import Rooms from './Components/Pages/Rooms'
 import Pricing from './Components/Pages/Pricing'
 import Admin from './Components/Pages/Admin'
+import NotFound from './Components/Pages/NotFound'
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
           <Route path="/rooms" component={Rooms} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/admin" component={Admin} />
-          {/* <Route path="*" component={NotFound} /> */}
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     );
