@@ -21,7 +21,7 @@ class RoomPopup extends React.Component {
       timespots: [],
       timeButtonText: "Pick the time",
       timespot_id: null,
-      timePicked: false
+      timePicked: false,
     };
   }
     
@@ -78,10 +78,11 @@ class RoomPopup extends React.Component {
       this.getReserved(this.state.selectedDate);
       this.setState({
         timeButtonText: "Pick the time",
+        reserved: [],
         timespot_id: null,
         timePicked: false,
         selectedDate: null})
-      alert("Reservation successful. Check your email.");
+      alert("Reservation successful. \nPlease pay at the reception and get further assistance. \nDon't forget to bring your WeWork card.");
   }
 
   getReserved = async(noTimeDate) => {
@@ -117,8 +118,16 @@ class RoomPopup extends React.Component {
              minDate = {tomorrow}
              disablePast />
               </MuiPickersUtilsProvider>
-                 {this.state.reserved.length==0 && <p> Pick a date </p>}
-                 {this.state.reserved.length!==0 && (<div className="dropdown">
+                 {!this.state.selectedDate && 
+                 <div className = "text-center"> 
+                 <p>Pick a date </p>
+                 <span>The earliest reservation day is tomorrow and the latest is next month.</span> <br/>
+                 <span>Contact us for special cases!</span>
+                 </div>}
+                 {this.state.reserved.length==9 && this.state.selectedDate &&
+                 <div>All day reserved, please pick another day or room.</div>}
+                 {this.state.selectedDate && 
+                  (<div className="dropdown">
                 <button className="btn btn-outline-dark dropdown-toggle btn-popup"
                     type="button" id="dropdownMenuButton"
                     data-toggle="dropdown"

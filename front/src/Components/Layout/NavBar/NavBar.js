@@ -12,11 +12,21 @@ class NavBar extends React.Component {
          <a className="nav-link" href="/rooms">Rooms</a>
          <a className="nav-link" href="/pricing">Pricing</a>
          <a className="nav-link" href="/about">About</a>
-         <div className="nav-button">
-         <button className="btn btn-outline-light">
-            Sign out
-         </button>
-         </div>
+         <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle nav-button"
+              type="button"
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false">
+                My Profile
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item disabled">Name LastName</a>
+              <a class="dropdown-item disabled">Desk number: </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" role ="button">Sign out</a>
+            </div>
+      </div>
        </nav>
      </div>
    </header>

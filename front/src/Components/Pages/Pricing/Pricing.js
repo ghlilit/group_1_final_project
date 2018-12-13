@@ -5,7 +5,8 @@ import './Pricing.css'
 const Pricing = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar /> 
+        <br /><br /><br />
         <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 className="display-4">Pricing</h1>
             <p className="lead">Become a premium member to enjoy all the benefits WeWork has to offer. We have special plans and prices for different needs.</p>
