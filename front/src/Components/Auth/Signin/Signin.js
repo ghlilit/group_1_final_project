@@ -1,20 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { signIn } from '../../../actions';
 
 class Signin extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        };
+    }
+
+    onUsernameChange = (event) => {
+        this.setState({
+            email: event.target.value
+        })
+    }
+
+    onPasswordChange = (event) => {
+        this.setState({
+            password: event.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const { email, password} = this.state;
+        if(email && password) {
+            this.props.signIn({email, password});
+            this.props.history.push('/rooms');
+        }
+    }
+
   render() {
+      console.log(this.state);
     return (
         <div>
          <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto">
      <div className="inner container">
-     <a class="navbar-brand nav-main" href="/">WeWork</a>
+     <a className="navbar-brand nav-main" href="/">WeWork</a>
      </div>
    </header>
    </div>
         <div className="Sign lower-height">
-            <form className="form-signin">
-                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus/>
-                <input type="password" id="inputPassword" className="form-control" placeholder="Password" required/>
+            <form className="form-signin" onSubmit={this.handleSubmit}>
+                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus onChange={this.onUsernameChange}/>
+                <input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={this.onPasswordChange}/>
                 <br />
                 <button className="btn btn-lg btn-block btn-secondary" type="submit">Sign in</button>
             </form>
@@ -24,4 +57,8 @@ class Signin extends React.Component {
   }
 }
 
-export default Signin;
+const mapDispatchToProps = (dispatch) => (
+    bindActionCreators({ signIn }, dispatch)
+);
+
+export default connect(undefined, mapDispatchToProps)(Signin);
