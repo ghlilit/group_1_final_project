@@ -4,7 +4,7 @@ import premium from './img/premium.jpg'
 import catering from './img/catering.jpg'
 import events from './img/events.jpg'
 
-const Carousel = () => {
+function Carousel() {
   return (
     <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">

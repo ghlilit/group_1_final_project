@@ -1,12 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Footer from "./Footer";
+import NotFound from "./NotFound";
 
-describe("Footer", () => {
+describe("NotFound", () => {
 
     it("does not change over time", () => {
         const wrapper = shallow(
-            <Footer />
+            <NotFound />
         );
         expect(wrapper).toMatchSnapshot();
     })

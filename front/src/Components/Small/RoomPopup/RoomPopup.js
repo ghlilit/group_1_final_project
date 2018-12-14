@@ -12,18 +12,16 @@ const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
 const nextMonth = new Date(today.getTime() + 31 * 24 * 60 * 60 * 1000);
 
 class RoomPopup extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      user_id: 1,
-      selectedDate: null,
-      reserved: [],
-      timespots: [],
-      timeButtonText: "Pick the time",
-      timespot_id: null,
-      timePicked: false,
-    };
-  }
+
+  state = {
+    user_id: 1,
+    selectedDate: null,
+    reserved: [],
+    timespots: [],
+    timeButtonText: "Pick the time",
+    timespot_id: null,
+    timePicked: false,
+  };
     
   getTimespots = async() => {
     let timespots;
@@ -32,9 +30,9 @@ class RoomPopup extends React.Component {
       timespots = await result.json();
     } catch (error) {
       }
-      this.setState({
-        timespots,
-      })
+    this.setState({
+      timespots,
+    })
   }
 
   pickTime = (text, id) => {
@@ -57,11 +55,10 @@ class RoomPopup extends React.Component {
 
   handleReservation = async() => {
     const {user_id, timespot_id, selectedDate} = this.state;
-    const room_id = this.props.id;
     const data = {
       user_id,
       timespot_id,
-      room_id,
+      room_id: this.props.id,
       book_date: selectedDate.toJSON()
     }
     const Params = {
@@ -75,13 +72,14 @@ class RoomPopup extends React.Component {
       await fetch(BOOKINGS, Params);
     } catch (error) {
       }
-      this.getReserved(this.state.selectedDate);
-      this.setState({
-        timeButtonText: "Pick the time",
-        reserved: [],
-        timespot_id: null,
-        timePicked: false,
-        selectedDate: null})
+    this.getReserved(this.state.selectedDate);
+    this.setState({
+      timeButtonText: "Pick the time",
+      reserved: [],
+      timespot_id: null,
+      timePicked: false,
+      selectedDate: null
+    })
       alert("Reservation successful. \nPlease pay at the reception and get further assistance. \nDon't forget to bring your WeWork card.");
   }
 
@@ -93,7 +91,7 @@ class RoomPopup extends React.Component {
       reserved = await result.json();
     } catch (error) {
       }
-    reserved.forEach(timespot =>{
+    reserved.forEach(timespot => {
       arr.push(timespot.timespot_id);
     });
       if(arr.length === 0){
@@ -105,18 +103,18 @@ class RoomPopup extends React.Component {
   }
 
   render() {
-    const { selectedDate } = this.state;
+    const { selectedDate, reserved, timeButtonText, timespots, timePicked } = this.state;
     return (
       <div>
-        <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button>} modal>
+        <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button> } modal>
             <div className = "text-center">
-            <h4 className = " cover-heading popup-text">Reserve {this.props.name}</h4>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <DatePicker value={selectedDate}
-             onChange={this.handleDateChange}
-             maxDate = {nextMonth}
-             minDate = {tomorrow}
-             disablePast />
+              <h4 className = " cover-heading popup-text">Reserve {this.props.name}</h4>
+              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <DatePicker value={selectedDate}
+                  onChange={this.handleDateChange}
+                  maxDate = {nextMonth}
+                  minDate = {tomorrow}
+                  disablePast />
               </MuiPickersUtilsProvider>
                  {!this.state.selectedDate && 
                  <div className = "text-center"> 
