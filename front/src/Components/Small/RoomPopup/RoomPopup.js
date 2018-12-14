@@ -12,18 +12,16 @@ const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
 const nextMonth = new Date(today.getTime() + 31 * 24 * 60 * 60 * 1000);
 
 class RoomPopup extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      user_id: 1,
-      selectedDate: null,
-      reserved: [],
-      timespots: [],
-      timeButtonText: "Pick the time",
-      timespot_id: null,
-      timePicked: false,
-    };
-  }
+
+  state = {
+    user_id: 1,
+    selectedDate: null,
+    reserved: [],
+    timespots: [],
+    timeButtonText: "Pick the time",
+    timespot_id: null,
+    timePicked: false,
+  };
     
   getTimespots = async() => {
     let timespots;
@@ -32,9 +30,9 @@ class RoomPopup extends React.Component {
       timespots = await result.json();
     } catch (error) {
       }
-      this.setState({
-        timespots,
-      })
+    this.setState({
+      timespots,
+    })
   }
 
   pickTime = (text, id) => {
@@ -57,11 +55,10 @@ class RoomPopup extends React.Component {
 
   handleReservation = async() => {
     const {user_id, timespot_id, selectedDate} = this.state;
-    const room_id = this.props.id;
     const data = {
       user_id,
       timespot_id,
-      room_id,
+      room_id: this.props.id,
       book_date: selectedDate.toJSON()
     }
     const Params = {
@@ -75,13 +72,14 @@ class RoomPopup extends React.Component {
       await fetch(BOOKINGS, Params);
     } catch (error) {
       }
-      this.getReserved(this.state.selectedDate);
-      this.setState({
-        timeButtonText: "Pick the time",
-        reserved: [],
-        timespot_id: null,
-        timePicked: false,
-        selectedDate: null})
+    this.getReserved(this.state.selectedDate);
+    this.setState({
+      timeButtonText: "Pick the time",
+      reserved: [],
+      timespot_id: null,
+      timePicked: false,
+      selectedDate: null
+    })
       alert("Reservation successful. \nPlease pay at the reception and get further assistance. \nDon't forget to bring your WeWork card.");
   }
 
@@ -93,7 +91,7 @@ class RoomPopup extends React.Component {
       reserved = await result.json();
     } catch (error) {
       }
-    reserved.forEach(timespot =>{
+    reserved.forEach(timespot => {
       arr.push(timespot.timespot_id);
     });
       if(arr.length === 0){
@@ -105,52 +103,53 @@ class RoomPopup extends React.Component {
   }
 
   render() {
-    const { selectedDate } = this.state;
+    const { selectedDate, reserved, timeButtonText, timespots, timePicked } = this.state;
     return (
       <div>
-        <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button>} modal>
+        <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button> } modal>
             <div className = "text-center">
-            <h4 className = " cover-heading popup-text">Reserve {this.props.name}</h4>
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <DatePicker value={selectedDate}
-             onChange={this.handleDateChange}
-             maxDate = {nextMonth}
-             minDate = {tomorrow}
-             disablePast />
+              <h4 className = " cover-heading popup-text">Reserve {this.props.name}</h4>
+              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <DatePicker value={selectedDate}
+                  onChange={this.handleDateChange}
+                  maxDate = {nextMonth}
+                  minDate = {tomorrow}
+                  disablePast />
               </MuiPickersUtilsProvider>
-                 {!this.state.selectedDate && 
-                 <div className = "text-center"> 
-                 <p>Pick a date </p>
-                 <span>The earliest reservation day is tomorrow and the latest is next month.</span> <br/>
-                 <span>Contact us for special cases!</span>
-                 </div>}
-                 {this.state.reserved.length==9 && this.state.selectedDate &&
-                 <div>All day reserved, please pick another day or room.</div>}
-                 {this.state.selectedDate && 
-                  (<div className="dropdown">
-                <button className="btn btn-outline-dark dropdown-toggle btn-popup"
-                    type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                   {this.state.timeButtonText}
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {this.state.timespots.map(timespot => 
-                      <Timespot
-                      reserved = {this.state.reserved.includes(timespot.id)}
-                      id = {timespot.id}
-                      hours = {timespot.hours}
-                      key = {timespot.hours}
-                      pickTime = {this.pickTime} />)
-                    }
-                </div>
-                </div>)}
-                {this.state.timePicked && (<div>
-                <button
-                  className = "btn btn-lg btn-success btn-popup-submit"
-                  onClick = {this.handleReservation}>Make a reservation</button>
-                </div>)}
+                  {!selectedDate && 
+                    <div className = "text-center"> 
+                      <p>Pick a date</p>
+                      <span>The earliest reservation day is tomorrow and the latest is next month.</span> <br/>
+                      <span>Contact us for special cases!</span>
+                    </div>}
+                  {reserved.length==9 && selectedDate &&
+                    <div>All day reserved, please pick another day or room.</div>}
+                  {selectedDate && 
+                    <div className="dropdown">
+                      <button className="btn btn-outline-dark dropdown-toggle btn-popup"
+                          type="button" id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          {timeButtonText}
+                      </button>
+                      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        {timespots.map(timespot => 
+                          <Timespot
+                            reserved = {reserved.includes(timespot.id)}
+                            id = {timespot.id}
+                            hours = {timespot.hours}
+                            key = {timespot.hours}
+                            pickTime = {this.pickTime} />)}
+                      </div>
+                    </div>}
+                  {timePicked && 
+                    <div>
+                      <button
+                        className = "btn btn-lg btn-success btn-popup-submit"
+                        onClick = {this.handleReservation}>Make a reservation
+                      </button>
+                    </div>}
             </div>
         </Popup>
       </div>

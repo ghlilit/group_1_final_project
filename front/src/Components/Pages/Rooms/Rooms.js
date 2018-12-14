@@ -7,28 +7,20 @@ import Footer from '../../Layout/Footer';
 const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
-  constructor(){
-    super();
-      this.state = {
-        data: [],
-        }
-}
 
-getRooms = async() =>{
-  let data;
-    try {
-      let result = await fetch(ROOMS);
-      data = await result.json();
-    } 
-    catch (error) {
-    }
-    this.setState({
-      data,
-    })
-  }
-
-  componentDidMount = () => {
-    this.getRooms();
+  state = { data: [] }
+  
+  componentDidMount = async () => {
+    let data;
+      try {
+        let result = await fetch(ROOMS);
+        data = await result.json();
+      } 
+      catch (error) {
+      }
+      this.setState({
+        data,
+      })
   }
 
   render() {
@@ -38,16 +30,15 @@ getRooms = async() =>{
         <NavBar />
         <Carousel />
         <div className = "container">
-            {data.map((room, index) => 
-              <Room 
+          {data.map((room, index) => 
+            <Room 
               key = {room.name + room.id}
               id = {index + 1}
               name = {room.name}
               price = {room.price}
               setup = {room.setup}
               capacity = {room.capacity}/> 
-            )
-            }
+            )}
           <hr className="featurette-divider"/>
         </div>
         <Footer />

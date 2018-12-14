@@ -1,0 +1,615 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About does not change over time 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <About />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar"
+        >
+          <a
+            className="navbar-brand nav-main"
+            href="/rooms"
+          >
+            WeWork
+          </a>
+        </div>,
+        <div
+          className="Custom default-height"
+        >
+          <main
+            className="container inner cover"
+            role="main"
+          >
+            <h1
+              className="Central cover-heading"
+            >
+              Who we are
+            </h1>
+            <br />
+            <div
+              className="lead"
+            >
+              <p>
+                Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+              </p>
+              <p>
+                Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+              </p>
+              <p>
+                WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+              </p>
+              <br />
+              <p
+                className="Central"
+              >
+                <strong>
+                  WeWork. Your place to work.
+                </strong>
+              </p>
+            </div>
+          </main>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            className="navbar-brand nav-main"
+            href="/rooms"
+          >
+            WeWork
+          </a>,
+          "className": "cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "WeWork",
+            "className": "navbar-brand nav-main",
+            "href": "/rooms",
+          },
+          "ref": null,
+          "rendered": "WeWork",
+          "type": "a",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <main
+            className="container inner cover"
+            role="main"
+          >
+            <h1
+              className="Central cover-heading"
+            >
+              Who we are
+            </h1>
+            <br />
+            <div
+              className="lead"
+            >
+              <p>
+                Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+              </p>
+              <p>
+                Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+              </p>
+              <p>
+                WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+              </p>
+              <br />
+              <p
+                className="Central"
+              >
+                <strong>
+                  WeWork. Your place to work.
+                </strong>
+              </p>
+            </div>
+          </main>,
+          "className": "Custom default-height",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="Central cover-heading"
+              >
+                Who we are
+              </h1>,
+              <br />,
+              <div
+                className="lead"
+              >
+                <p>
+                  Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                </p>
+                <p>
+                  Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                </p>
+                <p>
+                  WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                </p>
+                <br />
+                <p
+                  className="Central"
+                >
+                  <strong>
+                    WeWork. Your place to work.
+                  </strong>
+                </p>
+              </div>,
+            ],
+            "className": "container inner cover",
+            "role": "main",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Who we are",
+                "className": "Central cover-heading",
+              },
+              "ref": null,
+              "rendered": "Who we are",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                  </p>,
+                  <p>
+                    Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                  </p>,
+                  <p>
+                    WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                  </p>,
+                  <br />,
+                  <p
+                    className="Central"
+                  >
+                    <strong>
+                      WeWork. Your place to work.
+                    </strong>
+                  </p>,
+                ],
+                "className": "lead",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.",
+                  },
+                  "ref": null,
+                  "rendered": "Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.",
+                  },
+                  "ref": null,
+                  "rendered": "Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.",
+                  },
+                  "ref": null,
+                  "rendered": "WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <strong>
+                      WeWork. Your place to work.
+                    </strong>,
+                    "className": "Central",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "WeWork. Your place to work.",
+                    },
+                    "ref": null,
+                    "rendered": "WeWork. Your place to work.",
+                    "type": "strong",
+                  },
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "main",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar"
+          >
+            <a
+              className="navbar-brand nav-main"
+              href="/rooms"
+            >
+              WeWork
+            </a>
+          </div>,
+          <div
+            className="Custom default-height"
+          >
+            <main
+              className="container inner cover"
+              role="main"
+            >
+              <h1
+                className="Central cover-heading"
+              >
+                Who we are
+              </h1>
+              <br />
+              <div
+                className="lead"
+              >
+                <p>
+                  Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                </p>
+                <p>
+                  Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                </p>
+                <p>
+                  WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                </p>
+                <br />
+                <p
+                  className="Central"
+                >
+                  <strong>
+                    WeWork. Your place to work.
+                  </strong>
+                </p>
+              </div>
+            </main>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              className="navbar-brand nav-main"
+              href="/rooms"
+            >
+              WeWork
+            </a>,
+            "className": "cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "WeWork",
+              "className": "navbar-brand nav-main",
+              "href": "/rooms",
+            },
+            "ref": null,
+            "rendered": "WeWork",
+            "type": "a",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <main
+              className="container inner cover"
+              role="main"
+            >
+              <h1
+                className="Central cover-heading"
+              >
+                Who we are
+              </h1>
+              <br />
+              <div
+                className="lead"
+              >
+                <p>
+                  Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                </p>
+                <p>
+                  Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                </p>
+                <p>
+                  WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                </p>
+                <br />
+                <p
+                  className="Central"
+                >
+                  <strong>
+                    WeWork. Your place to work.
+                  </strong>
+                </p>
+              </div>
+            </main>,
+            "className": "Custom default-height",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1
+                  className="Central cover-heading"
+                >
+                  Who we are
+                </h1>,
+                <br />,
+                <div
+                  className="lead"
+                >
+                  <p>
+                    Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                  </p>
+                  <p>
+                    Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                  </p>
+                  <p>
+                    WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                  </p>
+                  <br />
+                  <p
+                    className="Central"
+                  >
+                    <strong>
+                      WeWork. Your place to work.
+                    </strong>
+                  </p>
+                </div>,
+              ],
+              "className": "container inner cover",
+              "role": "main",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Who we are",
+                  "className": "Central cover-heading",
+                },
+                "ref": null,
+                "rendered": "Who we are",
+                "type": "h1",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "br",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.
+                    </p>,
+                    <p>
+                      Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.
+                    </p>,
+                    <p>
+                      WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.
+                    </p>,
+                    <br />,
+                    <p
+                      className="Central"
+                    >
+                      <strong>
+                        WeWork. Your place to work.
+                      </strong>
+                    </p>,
+                  ],
+                  "className": "lead",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.",
+                    },
+                    "ref": null,
+                    "rendered": "Calling the inspired ones. The corporate shakers, business nomads, freelancers, energetic entrepreneurs, international workers, mobile movers, project teams, start-ups and well-established companies.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.",
+                    },
+                    "ref": null,
+                    "rendered": "Welcome to WeWork — your place to work. Where you’ll watch businesses grow because of people and ideas. Where you’ll surround yourself with those who love what they do. And where nothing beats a mental block like a really great cup of coffee served up by one of our expert baristas.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.",
+                    },
+                    "ref": null,
+                    "rendered": "WeWork was built on the idea that success breeds more success. That’s why we’ve cultivated a community of members who are thinkers, achievers and imagineers. We’ve built WeWork that suits your every need. And our energetic staff attends to all the details so you can focus on your next big idea.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <strong>
+                        WeWork. Your place to work.
+                      </strong>,
+                      "className": "Central",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "WeWork. Your place to work.",
+                      },
+                      "ref": null,
+                      "rendered": "WeWork. Your place to work.",
+                      "type": "strong",
+                    },
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "main",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,1903 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel does not change over time 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Carousel />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <ol
+          className="carousel-indicators"
+        >
+          <li
+            className="active"
+            data-slide-to="0"
+            data-target="#myCarousel"
+          />
+          <li
+            data-slide-to="1"
+            data-target="#myCarousel"
+          />
+          <li
+            data-slide-to="2"
+            data-target="#myCarousel"
+          />
+        </ol>,
+        <div
+          className="carousel-inner"
+        >
+          <div
+            className="carousel-item active"
+          >
+            <img
+              alt="First slide"
+              className="first-slide"
+              src="catering.jpg"
+            />
+            <div
+              className="container"
+            >
+              <div
+                className="carousel-caption"
+              >
+                <h1>
+                  Catering
+                </h1>
+                <p>
+                  We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                </p>
+                <p>
+                  <a
+                    className="btn btn-lg btn-outline-light"
+                    href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                    role="button"
+                  >
+                    Email us
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="carousel-item"
+          >
+            <img
+              alt="Second slide"
+              className="second-slide"
+              src="premium.jpg"
+            />
+            <div
+              className="container"
+            >
+              <div
+                className="carousel-caption"
+              >
+                <h1>
+                  Premium membership
+                </h1>
+                <p>
+                  Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                </p>
+                <p>
+                  <a
+                    className="btn btn-lg btn-outline-light"
+                    href="/pricing"
+                    role="button"
+                  >
+                    Pricing
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="carousel-item"
+          >
+            <img
+              alt="Third slide"
+              className="third-slide"
+              src="events.jpg"
+            />
+            <div
+              className="container"
+            >
+              <div
+                className="carousel-caption"
+              >
+                <h1>
+                  Special events
+                </h1>
+                <p>
+                  We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                </p>
+                <p>
+                  <a
+                    className="btn btn-lg btn-outline-light"
+                    href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                    role="button"
+                  >
+                    More info
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>,
+        <a
+          className="carousel-control-prev"
+          data-slide="prev"
+          href="#myCarousel"
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+            className="carousel-control-prev-icon"
+          />
+          <span
+            className="sr-only"
+          >
+            Previous
+          </span>
+        </a>,
+        <a
+          className="carousel-control-next"
+          data-slide="next"
+          href="#myCarousel"
+          role="button"
+        >
+          <span
+            aria-hidden="true"
+            className="carousel-control-next-icon"
+          />
+          <span
+            className="sr-only"
+          >
+            Next
+          </span>
+        </a>,
+      ],
+      "className": "carousel slide",
+      "data-ride": "carousel",
+      "id": "myCarousel",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="active"
+              data-slide-to="0"
+              data-target="#myCarousel"
+            />,
+            <li
+              data-slide-to="1"
+              data-target="#myCarousel"
+            />,
+            <li
+              data-slide-to="2"
+              data-target="#myCarousel"
+            />,
+          ],
+          "className": "carousel-indicators",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "active",
+              "data-slide-to": "0",
+              "data-target": "#myCarousel",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "data-slide-to": "1",
+              "data-target": "#myCarousel",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "data-slide-to": "2",
+              "data-target": "#myCarousel",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "li",
+          },
+        ],
+        "type": "ol",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="carousel-item active"
+            >
+              <img
+                alt="First slide"
+                className="first-slide"
+                src="catering.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Catering
+                  </h1>
+                  <p>
+                    We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                      role="button"
+                    >
+                      Email us
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>,
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Second slide"
+                className="second-slide"
+                src="premium.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Premium membership
+                  </h1>
+                  <p>
+                    Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="/pricing"
+                      role="button"
+                    >
+                      Pricing
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>,
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Third slide"
+                className="third-slide"
+                src="events.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Special events
+                  </h1>
+                  <p>
+                    We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                      role="button"
+                    >
+                      More info
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>,
+          ],
+          "className": "carousel-inner",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="First slide"
+                  className="first-slide"
+                  src="catering.jpg"
+                />,
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Catering
+                    </h1>
+                    <p>
+                      We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                        role="button"
+                      >
+                        Email us
+                      </a>
+                    </p>
+                  </div>
+                </div>,
+              ],
+              "className": "carousel-item active",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "First slide",
+                  "className": "first-slide",
+                  "src": "catering.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Catering
+                    </h1>
+                    <p>
+                      We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                        role="button"
+                      >
+                        Email us
+                      </a>
+                    </p>
+                  </div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h1>
+                        Catering
+                      </h1>,
+                      <p>
+                        We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                      </p>,
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                          role="button"
+                        >
+                          Email us
+                        </a>
+                      </p>,
+                    ],
+                    "className": "carousel-caption",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Catering",
+                      },
+                      "ref": null,
+                      "rendered": "Catering",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?",
+                      },
+                      "ref": null,
+                      "rendered": "We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                          role="button"
+                        >
+                          Email us
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Email us",
+                          "className": "btn btn-lg btn-outline-light",
+                          "href": "mailto:lilit_ghandilyan@edu.aua.am?subject=Catering",
+                          "role": "button",
+                        },
+                        "ref": null,
+                        "rendered": "Email us",
+                        "type": "a",
+                      },
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Second slide"
+                  className="second-slide"
+                  src="premium.jpg"
+                />,
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Premium membership
+                    </h1>
+                    <p>
+                      Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="/pricing"
+                        role="button"
+                      >
+                        Pricing
+                      </a>
+                    </p>
+                  </div>
+                </div>,
+              ],
+              "className": "carousel-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Second slide",
+                  "className": "second-slide",
+                  "src": "premium.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Premium membership
+                    </h1>
+                    <p>
+                      Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="/pricing"
+                        role="button"
+                      >
+                        Pricing
+                      </a>
+                    </p>
+                  </div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h1>
+                        Premium membership
+                      </h1>,
+                      <p>
+                        Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                      </p>,
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="/pricing"
+                          role="button"
+                        >
+                          Pricing
+                        </a>
+                      </p>,
+                    ],
+                    "className": "carousel-caption",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Premium membership",
+                      },
+                      "ref": null,
+                      "rendered": "Premium membership",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.",
+                      },
+                      "ref": null,
+                      "rendered": "Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          className="btn btn-lg btn-outline-light"
+                          href="/pricing"
+                          role="button"
+                        >
+                          Pricing
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Pricing",
+                          "className": "btn btn-lg btn-outline-light",
+                          "href": "/pricing",
+                          "role": "button",
+                        },
+                        "ref": null,
+                        "rendered": "Pricing",
+                        "type": "a",
+                      },
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Third slide"
+                  className="third-slide"
+                  src="events.jpg"
+                />,
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Special events
+                    </h1>
+                    <p>
+                      We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                        role="button"
+                      >
+                        More info
+                      </a>
+                    </p>
+                  </div>
+                </div>,
+              ],
+              "className": "carousel-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Third slide",
+                  "className": "third-slide",
+                  "src": "events.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Special events
+                    </h1>
+                    <p>
+                      We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                        role="button"
+                      >
+                        More info
+                      </a>
+                    </p>
+                  </div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h1>
+                        Special events
+                      </h1>,
+                      <p>
+                        We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                      </p>,
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                          role="button"
+                        >
+                          More info
+                        </a>
+                      </p>,
+                    ],
+                    "className": "carousel-caption",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Special events",
+                      },
+                      "ref": null,
+                      "rendered": "Special events",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.",
+                      },
+                      "ref": null,
+                      "rendered": "We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                          role="button"
+                        >
+                          More info
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "More info",
+                          "className": "btn btn-lg btn-outline-light",
+                          "href": "mailto:lilit_ghandilyan@edu.aua.am?subject=Events",
+                          "role": "button",
+                        },
+                        "ref": null,
+                        "rendered": "More info",
+                        "type": "a",
+                      },
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              aria-hidden="true"
+              className="carousel-control-prev-icon"
+            />,
+            <span
+              className="sr-only"
+            >
+              Previous
+            </span>,
+          ],
+          "className": "carousel-control-prev",
+          "data-slide": "prev",
+          "href": "#myCarousel",
+          "role": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-hidden": "true",
+              "className": "carousel-control-prev-icon",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Previous",
+              "className": "sr-only",
+            },
+            "ref": null,
+            "rendered": "Previous",
+            "type": "span",
+          },
+        ],
+        "type": "a",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              aria-hidden="true"
+              className="carousel-control-next-icon"
+            />,
+            <span
+              className="sr-only"
+            >
+              Next
+            </span>,
+          ],
+          "className": "carousel-control-next",
+          "data-slide": "next",
+          "href": "#myCarousel",
+          "role": "button",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-hidden": "true",
+              "className": "carousel-control-next-icon",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Next",
+              "className": "sr-only",
+            },
+            "ref": null,
+            "rendered": "Next",
+            "type": "span",
+          },
+        ],
+        "type": "a",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ol
+            className="carousel-indicators"
+          >
+            <li
+              className="active"
+              data-slide-to="0"
+              data-target="#myCarousel"
+            />
+            <li
+              data-slide-to="1"
+              data-target="#myCarousel"
+            />
+            <li
+              data-slide-to="2"
+              data-target="#myCarousel"
+            />
+          </ol>,
+          <div
+            className="carousel-inner"
+          >
+            <div
+              className="carousel-item active"
+            >
+              <img
+                alt="First slide"
+                className="first-slide"
+                src="catering.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Catering
+                  </h1>
+                  <p>
+                    We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                      role="button"
+                    >
+                      Email us
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Second slide"
+                className="second-slide"
+                src="premium.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Premium membership
+                  </h1>
+                  <p>
+                    Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="/pricing"
+                      role="button"
+                    >
+                      Pricing
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="carousel-item"
+            >
+              <img
+                alt="Third slide"
+                className="third-slide"
+                src="events.jpg"
+              />
+              <div
+                className="container"
+              >
+                <div
+                  className="carousel-caption"
+                >
+                  <h1>
+                    Special events
+                  </h1>
+                  <p>
+                    We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                  </p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-outline-light"
+                      href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                      role="button"
+                    >
+                      More info
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>,
+          <a
+            className="carousel-control-prev"
+            data-slide="prev"
+            href="#myCarousel"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              className="carousel-control-prev-icon"
+            />
+            <span
+              className="sr-only"
+            >
+              Previous
+            </span>
+          </a>,
+          <a
+            className="carousel-control-next"
+            data-slide="next"
+            href="#myCarousel"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              className="carousel-control-next-icon"
+            />
+            <span
+              className="sr-only"
+            >
+              Next
+            </span>
+          </a>,
+        ],
+        "className": "carousel slide",
+        "data-ride": "carousel",
+        "id": "myCarousel",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="active"
+                data-slide-to="0"
+                data-target="#myCarousel"
+              />,
+              <li
+                data-slide-to="1"
+                data-target="#myCarousel"
+              />,
+              <li
+                data-slide-to="2"
+                data-target="#myCarousel"
+              />,
+            ],
+            "className": "carousel-indicators",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "active",
+                "data-slide-to": "0",
+                "data-target": "#myCarousel",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "data-slide-to": "1",
+                "data-target": "#myCarousel",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "data-slide-to": "2",
+                "data-target": "#myCarousel",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "li",
+            },
+          ],
+          "type": "ol",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="carousel-item active"
+              >
+                <img
+                  alt="First slide"
+                  className="first-slide"
+                  src="catering.jpg"
+                />
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Catering
+                    </h1>
+                    <p>
+                      We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                        role="button"
+                      >
+                        Email us
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>,
+              <div
+                className="carousel-item"
+              >
+                <img
+                  alt="Second slide"
+                  className="second-slide"
+                  src="premium.jpg"
+                />
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Premium membership
+                    </h1>
+                    <p>
+                      Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="/pricing"
+                        role="button"
+                      >
+                        Pricing
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>,
+              <div
+                className="carousel-item"
+              >
+                <img
+                  alt="Third slide"
+                  className="third-slide"
+                  src="events.jpg"
+                />
+                <div
+                  className="container"
+                >
+                  <div
+                    className="carousel-caption"
+                  >
+                    <h1>
+                      Special events
+                    </h1>
+                    <p>
+                      We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                    </p>
+                    <p>
+                      <a
+                        className="btn btn-lg btn-outline-light"
+                        href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                        role="button"
+                      >
+                        More info
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>,
+            ],
+            "className": "carousel-inner",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="First slide"
+                    className="first-slide"
+                    src="catering.jpg"
+                  />,
+                  <div
+                    className="container"
+                  >
+                    <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Catering
+                      </h1>
+                      <p>
+                        We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                          role="button"
+                        >
+                          Email us
+                        </a>
+                      </p>
+                    </div>
+                  </div>,
+                ],
+                "className": "carousel-item active",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "First slide",
+                    "className": "first-slide",
+                    "src": "catering.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Catering
+                      </h1>
+                      <p>
+                        We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                          role="button"
+                        >
+                          Email us
+                        </a>
+                      </p>
+                    </div>,
+                    "className": "container",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h1>
+                          Catering
+                        </h1>,
+                        <p>
+                          We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?
+                        </p>,
+                        <p>
+                          <a
+                            className="btn btn-lg btn-outline-light"
+                            href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                            role="button"
+                          >
+                            Email us
+                          </a>
+                        </p>,
+                      ],
+                      "className": "carousel-caption",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Catering",
+                        },
+                        "ref": null,
+                        "rendered": "Catering",
+                        "type": "h1",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?",
+                        },
+                        "ref": null,
+                        "rendered": "We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            className="btn btn-lg btn-outline-light"
+                            href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering"
+                            role="button"
+                          >
+                            Email us
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Email us",
+                            "className": "btn btn-lg btn-outline-light",
+                            "href": "mailto:lilit_ghandilyan@edu.aua.am?subject=Catering",
+                            "role": "button",
+                          },
+                          "ref": null,
+                          "rendered": "Email us",
+                          "type": "a",
+                        },
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Second slide"
+                    className="second-slide"
+                    src="premium.jpg"
+                  />,
+                  <div
+                    className="container"
+                  >
+                    <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Premium membership
+                      </h1>
+                      <p>
+                        Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="/pricing"
+                          role="button"
+                        >
+                          Pricing
+                        </a>
+                      </p>
+                    </div>
+                  </div>,
+                ],
+                "className": "carousel-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Second slide",
+                    "className": "second-slide",
+                    "src": "premium.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Premium membership
+                      </h1>
+                      <p>
+                        Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="/pricing"
+                          role="button"
+                        >
+                          Pricing
+                        </a>
+                      </p>
+                    </div>,
+                    "className": "container",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h1>
+                          Premium membership
+                        </h1>,
+                        <p>
+                          Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.
+                        </p>,
+                        <p>
+                          <a
+                            className="btn btn-lg btn-outline-light"
+                            href="/pricing"
+                            role="button"
+                          >
+                            Pricing
+                          </a>
+                        </p>,
+                      ],
+                      "className": "carousel-caption",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Premium membership",
+                        },
+                        "ref": null,
+                        "rendered": "Premium membership",
+                        "type": "h1",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.",
+                        },
+                        "ref": null,
+                        "rendered": "Wework Premium Membership is a paid, premium subscription that offers a wide range of benefits across the WeWork platform. One of the most important ones is the ability to do room reservations.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            className="btn btn-lg btn-outline-light"
+                            href="/pricing"
+                            role="button"
+                          >
+                            Pricing
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Pricing",
+                            "className": "btn btn-lg btn-outline-light",
+                            "href": "/pricing",
+                            "role": "button",
+                          },
+                          "ref": null,
+                          "rendered": "Pricing",
+                          "type": "a",
+                        },
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Third slide"
+                    className="third-slide"
+                    src="events.jpg"
+                  />,
+                  <div
+                    className="container"
+                  >
+                    <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Special events
+                      </h1>
+                      <p>
+                        We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                          role="button"
+                        >
+                          More info
+                        </a>
+                      </p>
+                    </div>
+                  </div>,
+                ],
+                "className": "carousel-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Third slide",
+                    "className": "third-slide",
+                    "src": "events.jpg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="carousel-caption"
+                    >
+                      <h1>
+                        Special events
+                      </h1>
+                      <p>
+                        We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                      </p>
+                      <p>
+                        <a
+                          className="btn btn-lg btn-outline-light"
+                          href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                          role="button"
+                        >
+                          More info
+                        </a>
+                      </p>
+                    </div>,
+                    "className": "container",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h1>
+                          Special events
+                        </h1>,
+                        <p>
+                          We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.
+                        </p>,
+                        <p>
+                          <a
+                            className="btn btn-lg btn-outline-light"
+                            href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                            role="button"
+                          >
+                            More info
+                          </a>
+                        </p>,
+                      ],
+                      "className": "carousel-caption",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Special events",
+                        },
+                        "ref": null,
+                        "rendered": "Special events",
+                        "type": "h1",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.",
+                        },
+                        "ref": null,
+                        "rendered": "We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.",
+                        "type": "p",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            className="btn btn-lg btn-outline-light"
+                            href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events"
+                            role="button"
+                          >
+                            More info
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "More info",
+                            "className": "btn btn-lg btn-outline-light",
+                            "href": "mailto:lilit_ghandilyan@edu.aua.am?subject=Events",
+                            "role": "button",
+                          },
+                          "ref": null,
+                          "rendered": "More info",
+                          "type": "a",
+                        },
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                aria-hidden="true"
+                className="carousel-control-prev-icon"
+              />,
+              <span
+                className="sr-only"
+              >
+                Previous
+              </span>,
+            ],
+            "className": "carousel-control-prev",
+            "data-slide": "prev",
+            "href": "#myCarousel",
+            "role": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "carousel-control-prev-icon",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Previous",
+                "className": "sr-only",
+              },
+              "ref": null,
+              "rendered": "Previous",
+              "type": "span",
+            },
+          ],
+          "type": "a",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                aria-hidden="true"
+                className="carousel-control-next-icon"
+              />,
+              <span
+                className="sr-only"
+              >
+                Next
+              </span>,
+            ],
+            "className": "carousel-control-next",
+            "data-slide": "next",
+            "href": "#myCarousel",
+            "role": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-hidden": "true",
+                "className": "carousel-control-next-icon",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Next",
+                "className": "sr-only",
+              },
+              "ref": null,
+              "rendered": "Next",
+              "type": "span",
+            },
+          ],
+          "type": "a",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

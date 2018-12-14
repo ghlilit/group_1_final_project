@@ -1,0 +1,14 @@
+import React from "react";
+import { shallow } from "enzyme";
+import About from "./About";
+
+describe("About", () => {
+
+    it("does not change over time", () => {
+        const wrapper = shallow(
+            <About />
+        );
+        expect(wrapper).toMatchSnapshot();
+    })
+
+});
