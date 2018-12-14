@@ -136,13 +136,14 @@ class RoomPopup extends React.Component {
                    {this.state.timeButtonText}
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {this.state.timespots.map(timespot => 
+                        {this.state.timespots.map((timespot,index) => 
                       <Timespot
                       reserved = {this.state.reserved.includes(timespot.id)}
                       id = {timespot.id}
                       hours = {timespot.hours}
                       key = {timespot.hours}
-                      pickTime = {this.pickTime} />)
+                      pickTime = {this.pickTime}
+                      key={index} />)
                     }
                 </div>
                 </div>)}
