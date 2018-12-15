@@ -21,6 +21,9 @@ class Rooms extends React.Component {
       this.setState({
         rooms,
       })
+      if(localStorage.getItem('user')!== null){
+        console.log("we have an authenticated user");
+      }
       console.log(rooms);
   }
 

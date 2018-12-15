@@ -47,7 +47,7 @@ class Signin extends React.Component {
    </div>
         <div className="Sign lower-height">
             <form className="form-signin" onSubmit={this.handleSubmit}>
-            <img class="mb-4" src={logo} alt="logo" width="72" height="72"/>
+            <img className="mb-4" src={logo} alt="logo" width="72" height="72"/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus onChange={this.onUsernameChange}/>
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={this.onPasswordChange}/>
                 <p>{auth.error ? auth.error : ''}</p>
