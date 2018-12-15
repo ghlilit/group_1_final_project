@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import history from './browserHist';
+import { Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Signin from './Components/Auth/Signin'
 import Signup from './Components/Auth/Signup'
@@ -13,7 +14,7 @@ import NotFound from './Components/Pages/NotFound'
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <Switch>
           <Route exact path="/" component={Cover} /> 
           <Route path="/signin" component={Signin} />

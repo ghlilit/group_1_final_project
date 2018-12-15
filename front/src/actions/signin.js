@@ -1,15 +1,18 @@
 import {
   SIGNIN_SUCCEED,
-  SIGNIN_FAILED
+  SIGNIN_FAILED,
+  SIGNOUT
 } from '../constants';
+import history from '../browserHist';
 
 const succeed = (data) => ({
   type: SIGNIN_SUCCEED,
   payload: data
 });
 
-const failed = () => ({
-  type: SIGNIN_FAILED
+const failed = (error) => ({
+  type: SIGNIN_FAILED,
+  payload: error
 });
 
 const signIn = (obj) => {
@@ -21,9 +24,27 @@ const signIn = (obj) => {
     method: 'POST',
     body: JSON.stringify(obj)
   })
-    .then((res) => res.json())
-    .then((data) => data.status ? dispatch(succeed(data.data)) : dispatch(failed()))
+    .then((res) => {
+      if(res.status !== 200) {
+        dispatch(failed('Something went wrong'));
+      }
+      return res.json()
+    })
+    .then((data) => {
+      if(data.data) {
+        dispatch(succeed(data.data))
+        history.push('rooms');
+      } else if(data.errors) {
+        dispatch(failed(data.errors[0]))
+      }
+    })
     };
+}
+
+export const signOut = () => {
+  localStorage.removeItem('user');
+  history.push('/');
+  return { action: SIGNOUT }
 }
 
 export default signIn;
