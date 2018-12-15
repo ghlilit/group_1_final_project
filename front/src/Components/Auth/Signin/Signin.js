@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../logo.jpg'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { signIn } from '../../../actions';
@@ -46,10 +47,11 @@ class Signin extends React.Component {
    </div>
         <div className="Sign lower-height">
             <form className="form-signin" onSubmit={this.handleSubmit}>
+            <img class="mb-4" src={logo} alt="logo" width="72" height="72"/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus onChange={this.onUsernameChange}/>
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={this.onPasswordChange}/>
                 <br />
-                <button className="btn btn-lg btn-block btn-secondary" type="submit">Sign in</button>
+                <button className="btn btn-lg btn-block btn-outline-light" type="submit">Sign in</button>
             </form>
         </div>
         </div>

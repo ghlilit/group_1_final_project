@@ -4,14 +4,14 @@
   flex-direction: column;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  background-color: #333;
+  background-color: #24252A;
   color: white;
 }
 
 .Sign {
   text-align: center;
-  background-color: #333;
-  min-height: 92.6vh;
+  background-color: #24252A;
+  min-height: 92.8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@
 }
 
 .lower-height-cover{
-  min-height: 91vh;
+  min-height: 91.2vh;
 }
 
 /*
@@ -46,7 +46,7 @@ color: #fff;
 }
 
 .gray-navbar {
-  background-color: #333;
+  background-color: #24252A;
 }
 /*
 * Header
