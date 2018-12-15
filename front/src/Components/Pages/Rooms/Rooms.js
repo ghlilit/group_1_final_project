@@ -21,6 +21,7 @@ class Rooms extends React.Component {
       this.setState({
         data,
       })
+      console.log(data);
   }
 
   render() {
