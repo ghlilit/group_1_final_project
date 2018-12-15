@@ -41,38 +41,36 @@ class Admin extends React.Component {
     return (
       <div>
         <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column gray-navbar">
-            <header className="masthead mb-auto ">
+            <header className="masthead mb-auto container">
                 <div className="inner">
-                <h3 className="masthead-brand">WeWork Admin</h3>
-                    <nav className="nav nav-masthead justify-content-center">
-                        <button className="btn btn-outline-light">Sign out</button>
-                    </nav>
+                  <h3 className="masthead-brand">WeWork Admin</h3>
+                  <nav className="nav nav-masthead justify-content-center">
+                    <button className="btn btn-outline-light">Sign out</button>
+                  </nav>
                 </div>
             </header>
         </div>
         <div className="container my-3 p-3 bg-white rounded shadow-sm">
-        <small className="d-block text-right mt-3">
-          <input className = "form-control-sm" type="text" aria-label="Search"  value={searchTerm} onChange = {this.onSearchChange}/>
-          <button className="btn btn-outline-success my-2 my-sm-0"
-            onClick = {this.onSearchSubmit}>
-            Search
-           </button>
-           <button className="btn btn-outline-dark my-2 my-sm-0"
-            onClick = {this.getUserData}>
-            Clear
-           </button>
-        </small>
+          <small className="d-block text-right mt-3">
+            <input className = "form-control-sm" type="text" aria-label="Search"  value={searchTerm} onChange = {this.onSearchChange}/>
+            <button className="btn btn-outline-success my-2 my-sm-0"
+              onClick = {this.onSearchSubmit}>
+              Search
+            </button>
+            <button className="btn btn-outline-dark my-2 my-sm-0"
+              onClick = {this.getUserData}>
+              Clear
+            </button>
+          </small>
         <h6 className="border-bottom border-gray pb-2 mb-0">Users</h6>
-        {users.map((user, index) => 
-            <User 
-              user_id = {user.id}
-              key = {user.email}
-              fname = {user.fname}
-              lname = {user.lname}
-              role = {user.role}
-              email = {user.email}
-              /> 
-            )}
+          {users.map((user, index) => 
+              <User 
+                user_id = {user.id}
+                key = {user.email}
+                fname = {user.fname}
+                lname = {user.lname}
+                role = {user.role}
+                email = {user.email} />)}
           </div>
       </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 const USERS = "http://localhost:4000/users"
+const DESKS = "http://localhost:4000/desks"
 const roles = ["nonmember", "regular", "premium", "admin"]
 
 class User extends React.Component {
@@ -7,19 +8,45 @@ class User extends React.Component {
     role: this.props.role
   }
   
-  handleRoleChange = async (role) => {
+  createDesk = async(name) => {
+    const {user_id} = this.props;
+    const data = {
+      user_id,
+      name,
+    }
+    const Params = {
+      headers: {
+          'Content-Type': 'application/json'
+          },
+      body: JSON.stringify(data),
+      method: "POST"
+    }
+    try {
+      await fetch(DESKS, Params);
+    } catch (error) {
+    }
+  }
+
+  handleRoleChange = async(role) => {
+    let desk_name;
+    if (this.state.role === "nonmember" && (role === "regular" || role === "premium")){
+      desk_name = prompt("Please enter desk name");
+    }
     if (window.confirm(`Are you sure you want to make this user ${role}?`)){
+      if(desk_name){
+        this.createDesk(desk_name);
+      }
       const {user_id} = this.props;
       const data = {
         user_id,
         role,
       }
       const Params = {
-          headers: {
-              'Content-Type': 'application/json'
-              },
-          body: JSON.stringify(data),
-          method: "PATCH"
+        headers: {
+            'Content-Type': 'application/json'
+            },
+        body: JSON.stringify(data),
+        method: "PATCH"
       }
       try {
         const res = await fetch(`${USERS}/${user_id}`, Params);
