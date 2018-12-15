@@ -25,6 +25,7 @@ const signIn = (obj) => {
     body: JSON.stringify(obj)
   })
     .then((res) => {
+      console.log(res.headers)
       if(res.status !== 200) {
         dispatch(failed('Something went wrong'));
       }
@@ -41,10 +42,10 @@ const signIn = (obj) => {
     };
 }
 
-export const signOut = () => {
-  localStorage.removeItem('user');
-  history.push('/');
-  return { action: SIGNOUT }
-}
+// export const signOut = () => {
+//   localStorage.removeItem('user');
+//   history.push('/');
+//   return { action: SIGNOUT }
+// }
 
 export default signIn;
