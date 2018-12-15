@@ -30,12 +30,12 @@ class Signin extends React.Component {
         const { email, password} = this.state;
         if(email && password) {
             this.props.signIn({email, password});
-            this.props.history.push('/rooms');
         }
     }
 
   render() {
-      console.log(this.state);
+    console.log(this.state);
+    const {auth} = this.props;
     return (
         <div>
          <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
@@ -50,6 +50,7 @@ class Signin extends React.Component {
             <img class="mb-4" src={logo} alt="logo" width="72" height="72"/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus onChange={this.onUsernameChange}/>
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={this.onPasswordChange}/>
+                <p>{auth.error ? auth.error : ''}</p>
                 <br />
                 <button className="btn btn-lg btn-block btn-outline-light" type="submit">Sign in</button>
             </form>
@@ -63,4 +64,11 @@ const mapDispatchToProps = (dispatch) => (
     bindActionCreators({ signIn }, dispatch)
 );
 
-export default connect(undefined, mapDispatchToProps)(Signin);
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        auth: state.signIn
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signin);

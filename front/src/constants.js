@@ -3,3 +3,5 @@ export const SIGNIN_FAILED = 'SIGNIN_FAILED';
 
 export const SIGNUP_SUCCEED = 'SIGNUP_SUCCEED';
 export const SIGNUP_FAILED = 'SIGNUP_FAILED';
+
+export const SIGNOUT = 'SIGNOUT';
