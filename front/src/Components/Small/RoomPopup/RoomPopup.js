@@ -118,7 +118,7 @@ class RoomPopup extends React.Component {
                     <span>The earliest reservation day is tomorrow and the latest is next month.</span> <br/>
                     <span>Contact us for special cases!</span>
                   </div>}
-                {reserved.length==9 && selectedDate &&
+                {reserved.length===9 && selectedDate &&
                   <div>All day reserved, please pick another day or room.</div>}
                 {selectedDate && 
                   <div className="dropdown">

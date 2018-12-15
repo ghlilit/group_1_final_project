@@ -1,15 +1,17 @@
 class UsersController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!, except:[:index, :update]
 before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
-    if check_admin
-       @users = User.all
-       render json: @users
-    else
-       render json:{}, status: 401
-    end 
+    @users = User.all
+    render json: @users
+    # if check_admin
+    #    @users = User.all
+    #    render json: @users
+    # else
+    #    render json:{}, status: 401
+    # end 
   end
 
   # GET /users/1
@@ -30,12 +32,14 @@ before_action :set_user, only: [:show, :update, :destroy]
 
   # PATCH/PUT /users/1
   def update
-    if check_admin
-       @user.update(user_params)
+    @user.update(user_params)
        render json: @user
-    else
-       render json:{}, status:401
-   end
+  #   if check_admin
+  #      @user.update(user_params)
+  #      render json: @user
+  #   else
+  #      render json:{}, status:401
+  #  end
  end
 
   # DELETE /users/1

@@ -8,30 +8,30 @@ const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
 
-  state = { data: [] }
+  state = { rooms: [] }
   
   componentDidMount = async () => {
-    let data;
+    let rooms;
       try {
         let result = await fetch(ROOMS);
-        data = await result.json();
+        rooms = await result.json();
       } 
       catch (error) {
       }
       this.setState({
-        data,
+        rooms,
       })
-      console.log(data);
+      console.log(rooms);
   }
 
   render() {
-    const {data} = this.state;
+    const {rooms} = this.state;
     return (
       <div>
         <NavBar />
         <Carousel />
         <div className = "container">
-          {data.map((room, index) => 
+          {rooms.map((room, index) => 
             <Room 
               key = {room.name + room.id}
               id = {index + 1}

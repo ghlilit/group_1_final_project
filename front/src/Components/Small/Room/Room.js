@@ -13,7 +13,7 @@ class Room extends React.Component {
       <div>
         <hr className="featurette-divider"/>
         <div className="row featurette">
-          <div className={position}>
+          <div id = "position-div"className={position}>
             <h2 className="info-tab">{this.props.name}</h2>
             <br />
             <p className="lead text center"></p>
