@@ -67,6 +67,7 @@ class Admin extends React.Component {
     else{
       return (
         <div>
+          <div>
           {(userdata.role === "admin") && 
           <div>
             <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column gray-navbar">
@@ -105,7 +106,6 @@ class Admin extends React.Component {
             {(userdata.role !== "admin") && 
             <NotFound />}
         </div>
-<<<<<<< HEAD
         <div className="container my-3 p-3 bg-white rounded shadow-sm">
           <small className="d-block text-right mt-3">
             <input className = "form-control-sm" type="text" aria-label="Search"  value={searchTerm} onChange = {this.onSearchChange}/>
@@ -128,13 +128,9 @@ class Admin extends React.Component {
                 role = {user.role}
                 email = {user.email} />)}
           </div>
-      </div>
+          </div>
     )
-=======
-      )
-    }
->>>>>>> ce4df0e86da4ae6d010b20adb04ec03858c35673
   }
 }
-
+}
 export default Admin;

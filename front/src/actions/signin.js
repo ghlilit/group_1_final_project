@@ -57,7 +57,12 @@ const signIn = (obj) => {
           'id':res.data.id
         }))
         dispatch(succeed(res.data))
+        if(res.data.role==='admin'){
+          history.push('admin');
+        }
+        else{
         history.push('rooms');
+        }
       }
       return res;
     })
