@@ -3,4 +3,3 @@ class AddTimespotRefToBookings < ActiveRecord::Migration[5.2]
     add_reference :bookings, :timespot, foreign_key: true
   end
 end
-

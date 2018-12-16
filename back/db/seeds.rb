@@ -21,7 +21,7 @@ Timespot.create([
 User.create([
     {fname: "Admin", lname: "Adminyan", email:"admin.adminyan@gmail.com", role:"admin", password:"seedpassword", password_confirmation:"seedpassword"},
     {fname: "User", lname: "Useryan", email:"user.useryan2@gmail.com", role:"premium", password:"seedpassword", password_confirmation:"seedpassword"},
-    {fname: "User", lname: "Useryan", email:"user.useryan3@gmail.com", role:"nonmember", password:"seedpassword", password_confirmation:"seedpassword"},
+    {fname: "User", lname: "Useryan", email:"user.useryan3@gmail.com", role:"regular", password:"seedpassword", password_confirmation:"seedpassword"},
     {fname: "User", lname: "Useryan", email:"user.useryan4@gmail.com", role:"regular", password:"seedpassword", password_confirmation:"seedpassword"},
     {fname: "User", lname: "Useryan", email:"user.useryan5@gmail.com", role:"regular", password:"seedpassword", password_confirmation:"seedpassword"}
 ])

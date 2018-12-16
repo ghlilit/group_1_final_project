@@ -11,15 +11,33 @@ class Admin extends React.Component {
   
   getUserData = async() => {
     let users;
+    const userdata = JSON.parse(sessionStorage.getItem('user'));
+    console.log()
       try {
-        let result = await fetch(USERS);
+        let result = await fetch(USERS,{
+          method: 'GET',
+          headers: {
+            'Content-Type':"application/json",
+            'access-token':userdata['access-token'],
+            'client':userdata['client'],
+            'uid':userdata['uid'],
+            'expiry':userdata['expiry'],
+          }
+        });
         users = await result.json();
+        if(result.status===401){
+          this.setState({
+            users:[]
+          })
+        }
+        else{
+        this.setState({
+          users,
+        })
+      }
       } 
       catch (error) {
       }
-      this.setState({
-        users,
-      })
   }
 
   componentDidMount = async () => {
@@ -69,7 +87,7 @@ class Admin extends React.Component {
           {users.map((user, index) => 
               <User 
                 user_id = {user.id}
-                key = {user.email}
+                key = {index}
                 fname = {user.fname}
                 lname = {user.lname}
                 role = {user.role}
