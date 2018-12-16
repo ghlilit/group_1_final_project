@@ -69,10 +69,4 @@ const signIn = (obj) => {
     };
 }
 
-// export const signOut = () => {
-//   localStorage.removeItem('user');
-//   history.push('/');
-//   return { action: SIGNOUT }
-// }
-
 export default signIn;

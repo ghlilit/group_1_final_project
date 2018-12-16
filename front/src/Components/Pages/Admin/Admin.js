@@ -1,28 +1,29 @@
 import React from 'react'
 import User from "../../Small/User"
 import NotFound from "../NotFound"
+import history from '../../../browserHist';
 const USERS = "http://localhost:4000/users"
 
 class Admin extends React.Component {
 
   state = {
      users: [],
-     searchTerm: ''
+     searchTerm: '',
+     userdata: JSON.parse(sessionStorage.getItem('user'))
    }
   
   getUserData = async() => {
     let users;
-    const userdata = JSON.parse(sessionStorage.getItem('user'));
     console.log()
       try {
         let result = await fetch(USERS,{
           method: 'GET',
           headers: {
             'Content-Type':"application/json",
-            'access-token':userdata['access-token'],
-            'client':userdata['client'],
-            'uid':userdata['uid'],
-            'expiry':userdata['expiry'],
+            'access-token':this.state.userdata['access-token'],
+            'client':this.state.userdata['client'],
+            'uid':this.state.userdata['uid'],
+            'expiry':this.state.userdata['expiry'],
           }
         });
         users = await result.json();
@@ -43,6 +44,22 @@ class Admin extends React.Component {
 
   componentDidMount = async () => {
     this.getUserData();
+  }
+  signOut = async()=>{
+    let result = await fetch('http://localhost:4000/auth/sign_out',{
+      method:'DELETE',
+      headers: {
+        'Content-Type':"application/json",
+        'access-token':this.state.userdata['access-token'],
+        'client':this.state.userdata['client'],
+        'uid':this.state.userdata['uid'],
+        'expiry':this.state.userdata['expiry'],
+      }
+    })
+    if(result.status === 200){
+      sessionStorage.removeItem('user');
+      history.push('')
+    }
   }
 
   onSearchChange = (event) => {
@@ -75,7 +92,7 @@ class Admin extends React.Component {
                     <div className="inner">
                       <h3 className="masthead-brand">WeWork Admin</h3>
                       <nav className="nav nav-masthead justify-content-center">
-                        <button className="btn btn-outline-light">Sign out</button>
+                        <button className="btn btn-outline-light" onClick={()=>{this.signOut()}}>Sign out</button>
                       </nav>
                     </div>
                 </header>

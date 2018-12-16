@@ -1,10 +1,29 @@
 import React from 'react'
-
+import history from '../../../browserHist';
 
 class NavBar extends React.Component {
-
+  state = {
+    userdata: JSON.parse(sessionStorage.getItem('user'))
+  }
+  signOut = async()=>{
+    let result = await fetch('http://localhost:4000/auth/sign_out',{
+      method:'DELETE',
+      headers: {
+        'Content-Type':"application/json",
+        'access-token':this.state.userdata['access-token'],
+        'client':this.state.userdata['client'],
+        'uid':this.state.userdata['uid'],
+        'expiry':this.state.userdata['expiry'],
+      }
+    })
+    if(result.status === 200){
+      sessionStorage.removeItem('user');
+      history.push('')
+    }
+  }
   render() {
-    const userdata = JSON.parse(sessionStorage.getItem('user'));
+    const {userdata} = this.state
+    console.log("navbar state",this.state)
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
@@ -27,7 +46,7 @@ class NavBar extends React.Component {
               <span className="dropdown-item disabled">Membership: {userdata.role}</span>
               <span className="dropdown-item disabled">Desk number: {userdata.id}</span>
               <div className="dropdown-divider"></div>
-              <button className="dropdown-item">Sign out</button>
+              <button className="dropdown-item" onClick={()=>{this.signOut()}}>Sign out</button>
             </div>
       </div>
        </nav>
