@@ -1,13 +1,11 @@
 import React from 'react'
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { signIn } from '../../../actions';
 
 
 class NavBar extends React.Component {
 
   render() {
-    const {auth} = this.props
+    const userdata = JSON.parse(sessionStorage.getItem('user'));
+    console.log(userdata)    
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
@@ -26,9 +24,9 @@ class NavBar extends React.Component {
                 My Profile
             </button>
             <div className="dropdown-menu">
-              <span className="dropdown-item disabled">{auth.fname} {auth.lname}</span>
-              <span className="dropdown-item disabled">Membership: {auth.role}</span>
-              <span className="dropdown-item disabled">Desk number: </span>
+              <span className="dropdown-item disabled"> {userdata.fname} {userdata.lname}</span>
+              <span className="dropdown-item disabled">Membership: {userdata.role}</span>
+              <span className="dropdown-item disabled">Desk number: {userdata.id}</span>
               <div className="dropdown-divider"></div>
               <button className="dropdown-item">Sign out</button>
             </div>
@@ -41,14 +39,4 @@ class NavBar extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => (
-  bindActionCreators({ signIn }, dispatch)
-);
-
-const mapStateToProps = state => {
-  return {
-      auth: state.signIn
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default NavBar;

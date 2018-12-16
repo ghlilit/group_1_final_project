@@ -11,6 +11,8 @@ class Rooms extends React.Component {
   state = { rooms: [] }
   
   componentDidMount = async () => {
+    const userdata = JSON.parse(sessionStorage.getItem('user'));
+    console.log(userdata)  
     let rooms;
       try {
         let result = await fetch(ROOMS);
@@ -20,8 +22,8 @@ class Rooms extends React.Component {
       }
       this.setState({
         rooms,
+        userdata
       })
-      console.log(localStorage);
       // if(localStorage.getItem('user')!== null){
       //   console.log("we have an authenticated user");
       // }

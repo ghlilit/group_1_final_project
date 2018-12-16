@@ -52,7 +52,7 @@ class Signup extends React.Component {
         e.preventDefault();
         const { email, password, fname, lname, password_confirmation} = this.state;
         if(email && password && fname && lname && password_confirmation && password === password_confirmation) {
-            this.props.signUp({ fname, lname, email, password, password_confirmation, role: 'nonmember'});
+            this.props.signUp({ fname, lname, email, password, password_confirmation, role: 'regular'});
         }
     }
 

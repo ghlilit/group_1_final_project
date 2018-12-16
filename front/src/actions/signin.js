@@ -15,6 +15,9 @@ const failed = (error) => ({
   payload: error
 });
 
+let status;
+let headers = {};
+
 const signIn = (obj) => {
   return dispatch => {
    fetch(`http://localhost:4000/auth/sign_in`, {
@@ -24,30 +27,39 @@ const signIn = (obj) => {
     method: 'POST',
     body: JSON.stringify(obj)
   })
-    .then((res) => {
-      // console.log(res.data)
-      if(res.status !== 200) {
-        dispatch(failed('Something went wrong'));
-      }
-      else if (res.status === 200){
-        sessionStorage.setItem('user',JSON.stringify({
-          'access-token': res.headers.get('access-token'),
+  .then(res => {
+      status = res.status;
+      if(status === 200){
+      headers = {
+        'access-token': res.headers.get('access-token'),
           'client':res.headers.get('client'),
           'uid':res.headers.get('uid'),
           'expiry':res.headers.get('expiry')
-        }))
-      }
-      return res.json()
+      };
+     }
+      return res.json();
     })
-    .then((data) => {
-      console.log(data.errors)
-      if(data.data) {
-        dispatch(succeed(data.data))
-        history.push('rooms');
-      } else if(data.errors) {
-        console.log(data.errors[0])
-        dispatch(failed(data.errors[0]))
+    .then((res) => {
+      console.log(res)
+      if(res.errors) {
+        console.log(res.errors[0])
+        dispatch(failed(res.errors[0]))
       }
+      else if(res.data){
+        sessionStorage.setItem('user',JSON.stringify({
+          'access-token': headers['access-token'],
+          'client': headers['client'],
+          'uid': headers['uid'],
+          'expiry': headers['expiry'],
+          'fname':res.data.fname,
+          'lname':res.data.lname,
+          'role':res.data.role,
+          'id':res.data.id
+        }))
+        dispatch(succeed(res.data))
+        history.push('rooms');
+      }
+      return res;
     })
     };
 }

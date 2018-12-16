@@ -12,9 +12,9 @@ const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000);
 const nextMonth = new Date(today.getTime() + 31 * 24 * 60 * 60 * 1000);
 
 class RoomPopup extends React.Component {
-
+  userdata = JSON.parse(sessionStorage.getItem('user'));
   state = {
-    user_id: 1,
+    user_id: this.userdata.id,
     selectedDate: null,
     reserved: [],
     timespots: [],
@@ -100,6 +100,7 @@ class RoomPopup extends React.Component {
   }
 
   render() {
+    console.log('the state of roompopup',this.state)
     const { selectedDate, reserved, timeButtonText, timespots, timespot_id } = this.state;
     return (
       <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button> } modal>
@@ -135,7 +136,7 @@ class RoomPopup extends React.Component {
                           reserved = {reserved.includes(timespot.id)}
                           id = {timespot.id}
                           hours = {timespot.hours}
-                          key = {timespot.hours}
+                          key = {index}
                           handleHourChange = {this.handleHourChange}/>)}
                     </div>
                     </div>}
