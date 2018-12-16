@@ -29,7 +29,7 @@ const signIn = (obj) => {
       if(res.status !== 200) {
         dispatch(failed('Something went wrong'));
       }
-      else if (res.status == 200){
+      else if (res.status === 200){
         sessionStorage.setItem('user',JSON.stringify({
           'access-token': res.headers.get('access-token'),
           'client':res.headers.get('client'),

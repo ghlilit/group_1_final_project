@@ -27,12 +27,12 @@ class NavBar extends React.Component {
                 My Profile
             </button>
             <div className="dropdown-menu">
-              <a className="dropdown-item disabled">Name {auth.fname}</a>
-              <a className="dropdown-item disabled">LastName {auth.lname}</a>
-              <a className="dropdown-item disabled">Role {auth.role}</a>
-              <a className="dropdown-item disabled">Desk number: </a>
+              <p className="dropdown-item disabled">Name {auth.fname}</p>
+              <p className="dropdown-item disabled">LastName {auth.lname}</p>
+              <p className="dropdown-item disabled">Role {auth.role}</p>
+              <p className="dropdown-item disabled">Desk number: </p>
               <div className="dropdown-divider"></div>
-              <a className="dropdown-item" role ="button">Sign out</a>
+              <p className="dropdown-item" role ="button">Sign out</p>
             </div>
       </div>
        </nav>

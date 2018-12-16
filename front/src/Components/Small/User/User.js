@@ -72,7 +72,7 @@ class User extends React.Component {
             <div className="d-flex justify-content-between align-items-center w-100">
               <strong className="text-gray-dark">{fname} {lname}</strong>
                 <div className="dropdown show">
-                  <button className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <button className="btn btn-secondary dropdown-toggle" href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {role}
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
