@@ -5,7 +5,7 @@ const roles = ["nonmember", "regular", "premium", "admin"]
 
 class User extends React.Component {
   state = {
-    role: this.props.role
+    role: this.props.role,
   }
   
   createDesk = async(name) => {
@@ -27,10 +27,24 @@ class User extends React.Component {
     }
   }
 
+  deleteDesk = async() => {
+    const {user_id} = this.props;
+    try {
+      const result = await fetch(`${DESKS}/search/${user_id}`);
+      const json = await result.json();
+      fetch(`${DESKS}/${json[0].id}`, {method: 'delete'})
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   handleRoleChange = async(role) => {
     let desk_name;
     if (this.state.role === "nonmember" && (role === "regular" || role === "premium")){
       desk_name = prompt("Please enter desk name");
+    }
+    if (role === "nonmember" && (this.state.role === "regular" || this.state.role === "premium")){
+      this.deleteDesk();
     }
     if (window.confirm(`Are you sure you want to make this user ${role}?`)){
       if(desk_name){
@@ -64,7 +78,6 @@ class User extends React.Component {
     const {fname, lname, email} = this.props;
     const {role} = this.state;
     const display = roles.filter(userRole => userRole !== role);
-    console.log(display);
     return (
       <div>
         <div className="media text-muted pt-3">
@@ -77,7 +90,12 @@ class User extends React.Component {
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     {display.map(role => 
-                      <button className="dropdown-item" onClick = {() => {this.handleRoleChange(role)}}>{role}</button>
+                      <button 
+                      key = {role}
+                      className="dropdown-item"
+                       onClick = {() => {this.handleRoleChange(role)}}>
+                       {role}
+                       </button>
                     )}
                   </div>
                 </div>

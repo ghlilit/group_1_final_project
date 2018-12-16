@@ -7,7 +7,6 @@ import { signIn } from '../../../actions';
 class NavBar extends React.Component {
 
   render() {
-    console.log(this.props.auth.fname)
     const {auth} = this.props
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
@@ -27,12 +26,11 @@ class NavBar extends React.Component {
                 My Profile
             </button>
             <div className="dropdown-menu">
-              <p className="dropdown-item disabled">Name {auth.fname}</p>
-              <p className="dropdown-item disabled">LastName {auth.lname}</p>
-              <p className="dropdown-item disabled">Role {auth.role}</p>
-              <p className="dropdown-item disabled">Desk number: </p>
+              <span className="dropdown-item disabled">{auth.fname} {auth.lname}</span>
+              <span className="dropdown-item disabled">Membership: {auth.role}</span>
+              <span className="dropdown-item disabled">Desk number: </span>
               <div className="dropdown-divider"></div>
-              <p className="dropdown-item" role ="button">Sign out</p>
+              <button className="dropdown-item">Sign out</button>
             </div>
       </div>
        </nav>
@@ -48,7 +46,6 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
       auth: state.signIn
   }

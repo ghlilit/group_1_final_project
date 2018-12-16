@@ -32,7 +32,10 @@ class Admin extends React.Component {
 
   onSearchSubmit = () => {
     const {searchTerm, users} = this.state;
-    const filtered = users.filter(user => (user.fname.indexOf(searchTerm) > -1 || user.lname.indexOf(searchTerm) > -1 || user.email.indexOf(searchTerm) > -1));
+    const filtered = users.filter(user => 
+    (user.fname.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 ||
+     user.lname.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 ||
+    user.email.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1));
     this.setState({users: filtered});
   }
 
