@@ -45,6 +45,7 @@ const signIn = (obj) => {
         dispatch(succeed(data.data))
         history.push('rooms');
       } else if(data.errors) {
+        console.log(data.errors[0])
         dispatch(failed(data.errors[0]))
       }
     })

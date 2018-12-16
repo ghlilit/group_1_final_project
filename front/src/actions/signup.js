@@ -34,8 +34,9 @@ const signUp = (obj) => {
       )
     .then((data) => {
       if(data.errors){
-        console.log(data.errors)
-        dispatch(failed(data.errors[0]))
+        const errors = data.errors
+        console.log(errors[Object.keys(errors)[0]][0])
+        dispatch(failed(errors[Object.keys(errors)[0]][0]))
       }
       else if(data.data){
         dispatch(succeed(data.data))

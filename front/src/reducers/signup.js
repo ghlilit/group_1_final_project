@@ -5,7 +5,7 @@ import {
   
   const initialState = {};
   
-  const signIn = (state=initialState, action) => {
+  const signUp = (state=initialState, action) => {
     const { payload } = action;
     switch(action.type) {
       case SIGNUP_SUCCEED:
