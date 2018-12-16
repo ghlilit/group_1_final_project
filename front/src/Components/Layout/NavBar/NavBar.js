@@ -5,7 +5,6 @@ class NavBar extends React.Component {
 
   render() {
     const userdata = JSON.parse(sessionStorage.getItem('user'));
-    console.log(userdata)    
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">

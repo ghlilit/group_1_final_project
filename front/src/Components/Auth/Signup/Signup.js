@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from '../logo.jpg'
+import "../../Layout/InitialNavBar"
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { signUp } from '../../../actions';
+import InitialNavBar from '../../Layout/InitialNavBar';
 
 class Signup extends React.Component {
     constructor(props) {
@@ -61,13 +63,7 @@ class Signup extends React.Component {
       const {auth} = this.props
     return (
      <div >
-        <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
-            <header className="masthead mb-auto">
-                <div className="inner container">
-                    <a className="navbar-brand nav-main" href="/">WeWork</a>
-                </div>
-            </header>
-     </div>
+       <InitialNavBar />
         <div className="Sign">
             <form className="form-signup" onSubmit={this.handleSubmit}>
                 <img className="mb-4" src={logo} alt="logo" width="72" height="72"/>

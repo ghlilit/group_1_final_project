@@ -4,6 +4,7 @@ import NavBar from "../../Layout/NavBar"
 import Carousel from "../../Small/Carousel"
 import Room from "../../Small/Room"
 import Footer from '../../Layout/Footer';
+import NotFound from "../NotFound"
 const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
@@ -30,24 +31,29 @@ class Rooms extends React.Component {
   }
 
   render() {
+    const userdata = JSON.parse(sessionStorage.getItem('user'));
     const {rooms} = this.state;
     return (
       <div>
-        <NavBar />
-        <Carousel />
-        <div className = "container">
-          {rooms.map((room, index) => 
-            <Room 
-              key = {room.name + room.id}
-              id = {index + 1}
-              name = {room.name}
-              price = {room.price}
-              setup = {room.setup}
-              capacity = {room.capacity}/> 
-            )}
-          <hr className="featurette-divider"/>
-        </div>
-        <Footer />
+        {userdata &&  <div>
+          <NavBar />
+          <Carousel />
+          <div className = "container">
+            {rooms.map((room, index) => 
+              <Room 
+                key = {room.name + room.id}
+                id = {index + 1}
+                name = {room.name}
+                price = {room.price}
+                setup = {room.setup}
+                capacity = {room.capacity}/> 
+              )}
+            <hr className="featurette-divider"/>
+          </div>
+          <Footer />
+        </div>}
+        {!userdata && 
+        <NotFound /> }
       </div>
     )
   }

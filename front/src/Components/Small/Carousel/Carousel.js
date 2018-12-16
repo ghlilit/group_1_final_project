@@ -19,7 +19,7 @@ function Carousel() {
               <div className="carousel-caption">
                 <h1>Catering</h1>
                 <p>We’ll take care of everything so you can focus on your meeting. We have packages to make your choice easier, but there is lots more to choose from. We’d love to help you assemble a healthy lunch, a selection of delicious American pastries, an extensive buffet or dinner, or maybe just a simple breakfast to start the day with something nice?</p>
-                <p><a className="btn btn-lg btn-outline-light" href="mailto:lilit_ghandilyan@edu.aua.am?subject=Catering" role="button">Email us</a></p>
+                <p><a className="btn btn-lg btn-outline-light" href="mailto:wework@info.com?subject=Catering" role="button">Email us</a></p>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ function Carousel() {
               <div className="carousel-caption">
                 <h1>Special events</h1>
                 <p>We love to host special events and see our beautiful spaces become the scene of all types of exceptional occasions. Make an appointment and we’ll make sure your seminar, event, workshop, talk, party or shareholder meeting will be a blast.</p>
-                <p><a className="btn btn-lg btn-outline-light" href="mailto:lilit_ghandilyan@edu.aua.am?subject=Events" role="button">More info</a></p>
+                <p><a className="btn btn-lg btn-outline-light" href="mailto:wework@info.com?subject=Events" role="button">More info</a></p>
               </div>
             </div>
           </div>
