@@ -52,29 +52,31 @@ class Signup extends React.Component {
         e.preventDefault();
         const { email, password, fname, lname, password_confirmation} = this.state;
         if(email && password && fname && lname && password_confirmation && password === password_confirmation) {
-            this.props.signUp({ fname, lname, email, password, password_confirmation, role: 'user'});
+            this.props.signUp({ fname, lname, email, password, password_confirmation, role: 'nonmember'});
         }
     }
 
   render() {
       console.log(this.state);
+      const {auth} = this.props
     return (
      <div >
         <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
             <header className="masthead mb-auto">
                 <div className="inner container">
-                    <a class="navbar-brand nav-main" href="/">WeWork</a>
+                    <a className="navbar-brand nav-main" href="/">WeWork</a>
                 </div>
             </header>
      </div>
         <div className="Sign">
             <form className="form-signup" onSubmit={this.handleSubmit}>
-                <img class="mb-4" src={logo} alt="logo" width="72" height="72"/>
+                <img className="mb-4" src={logo} alt="logo" width="72" height="72"/>
                 <input type="text" id="inputName" className="form-control" placeholder="Name" required autoFocus onChange={(event) => this.onChange(event, 'fname')}/>
                 <input type="text" id="inputLastName" className="form-control" placeholder="Last Name" required onChange={(event) => this.onChange(event, 'lname')}/>
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required onChange={(event) => this.onChange(event, 'email')}/>
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" required onChange={(event) => this.onChange(event, 'password')}/>
                 <input type="password" id="inputPassword2" className="form-control" placeholder="Confirm Password" required onChange={(event) => this.onChange(event, 'coPassword')}/>
+                <p>{auth.error ? auth.error : ''}</p>
                 <br />
                 <button className="btn btn-lg btn-block btn-outline-light" type="submit">Sign up</button>
             </form>
@@ -87,5 +89,11 @@ class Signup extends React.Component {
 const mapDispatchToProps = (dispatch) => (
     bindActionCreators({ signUp }, dispatch)
 );
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        auth: state.signIn
+    }
+}
 
-export default connect(undefined, mapDispatchToProps)(Signup);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);

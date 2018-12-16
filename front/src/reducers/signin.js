@@ -1,7 +1,6 @@
 import {
   SIGNIN_SUCCEED,
   SIGNIN_FAILED,
-  SIGNOUT
 } from '../constants';
 
 const initialState = {};
@@ -15,8 +14,6 @@ const signIn = (state=initialState, action) => {
       return {
         error: payload
       };
-    case SIGNOUT:
-      return {}
     default: 
       return initialState;
   }

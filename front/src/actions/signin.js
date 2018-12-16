@@ -1,7 +1,7 @@
 import {
   SIGNIN_SUCCEED,
   SIGNIN_FAILED,
-  SIGNOUT
+  // SIGNOUT
 } from '../constants';
 import history from '../browserHist';
 

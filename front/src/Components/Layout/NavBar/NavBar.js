@@ -8,6 +8,7 @@ class NavBar extends React.Component {
 
   render() {
     console.log(this.props.auth.fname)
+    const {auth} = this.props
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
@@ -26,9 +27,9 @@ class NavBar extends React.Component {
                 My Profile
             </button>
             <div className="dropdown-menu">
-              <a className="dropdown-item disabled">Name {this.props.auth.fname}</a>
-              <a className="dropdown-item disabled">LastName {this.props.auth.lname}</a>
-              <a className="dropdown-item disabled">Role {this.props.auth.role}</a>
+              <a className="dropdown-item disabled">Name {auth.fname}</a>
+              <a className="dropdown-item disabled">LastName {auth.lname}</a>
+              <a className="dropdown-item disabled">Role {auth.role}</a>
               <a className="dropdown-item disabled">Desk number: </a>
               <div className="dropdown-divider"></div>
               <a className="dropdown-item" role ="button">Sign out</a>
