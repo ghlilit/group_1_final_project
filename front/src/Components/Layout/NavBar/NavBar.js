@@ -3,7 +3,21 @@ import history from '../../../browserHist';
 
 class NavBar extends React.Component {
   state = {
-    userdata: JSON.parse(sessionStorage.getItem('user'))
+    userdata: JSON.parse(sessionStorage.getItem('user')),
+    desk:{},
+    bookings:{}
+
+  }
+  getUserData = async()=>{
+    let result = await fetch(`http://localhost:4000/users/${this.state.userdata.id}`);
+    let data = await result.json()
+    this.setState({
+      desk:data.desk,
+      bookings:data.bookings,
+    })
+  }
+  componentDidMount(){
+    this.getUserData()
   }
   signOut = async()=>{
     let result = await fetch('http://localhost:4000/auth/sign_out',{
@@ -22,8 +36,8 @@ class NavBar extends React.Component {
     }
   }
   render() {
+    console.log(this.state)
     const {userdata} = this.state
-    console.log("navbar state",this.state)
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">

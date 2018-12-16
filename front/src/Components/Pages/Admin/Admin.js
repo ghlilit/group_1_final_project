@@ -113,7 +113,7 @@ class Admin extends React.Component {
               {users.map((user, index) => 
                   <User 
                     user_id = {user.id}
-                    key = {user.email}
+                    key = {index}
                     fname = {user.fname}
                     lname = {user.lname}
                     role = {user.role}
@@ -123,28 +123,6 @@ class Admin extends React.Component {
             {(userdata.role !== "admin") && 
             <NotFound />}
         </div>
-        <div className="container my-3 p-3 bg-white rounded shadow-sm">
-          <small className="d-block text-right mt-3">
-            <input className = "form-control-sm" type="text" aria-label="Search"  value={searchTerm} onChange = {this.onSearchChange}/>
-            <button className="btn btn-outline-success my-2 my-sm-0"
-              onClick = {this.onSearchSubmit}>
-              Search
-            </button>
-            <button className="btn btn-outline-dark my-2 my-sm-0"
-              onClick = {this.getUserData}>
-              Clear
-            </button>
-          </small>
-        <h6 className="border-bottom border-gray pb-2 mb-0">Users</h6>
-          {users.map((user, index) => 
-              <User 
-                user_id = {user.id}
-                key = {index}
-                fname = {user.fname}
-                lname = {user.lname}
-                role = {user.role}
-                email = {user.email} />)}
-          </div>
           </div>
     )
   }

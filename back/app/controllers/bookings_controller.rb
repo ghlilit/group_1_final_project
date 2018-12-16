@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :search, :create]
-  before_action :set_booking, only: [:show, :update, :destroy]
+  # before_action :authenticate_user!, except:[:index, :show, :search, :create]
+  before_action :set_booking, only: [:show, :update,:search,:destroy]
 
   # GET /bookings
   def index
@@ -9,9 +9,9 @@ class BookingsController < ApplicationController
   end
 
   # GET /bookings/1
-  # def show
-  #   render json: @booking
-  # end
+  def show
+    render json: @booking
+  end
 
   # POST /bookings
   def create

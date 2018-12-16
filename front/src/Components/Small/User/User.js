@@ -39,6 +39,7 @@ class User extends React.Component {
   }
 
   handleRoleChange = async(role) => {
+    let userdata = JSON.parse(sessionStorage.getItem('user'))
     let desk_name;
     if (this.state.role === "nonmember" && (role === "regular" || role === "premium")){
       desk_name = prompt("Please enter desk name");
@@ -57,10 +58,14 @@ class User extends React.Component {
       }
       const Params = {
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type':"application/json",
+          'access-token':userdata['access-token'],
+          'client':userdata['client'],
+          'uid':userdata['uid'],
+          'expiry':userdata['expiry'],
             },
         body: JSON.stringify(data),
-        method: "PATCH"
+        method: "PUT"
       }
       try {
         const res = await fetch(`${USERS}/${user_id}`, Params);

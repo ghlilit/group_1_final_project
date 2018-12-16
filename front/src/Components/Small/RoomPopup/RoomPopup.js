@@ -47,10 +47,15 @@ class RoomPopup extends React.Component {
     });
       if(arr.length === 0){
         arr.push(404);
+        this.setState({
+          reserved: []
+        })
       }
+      else{
     this.setState({
       reserved: arr,
     })
+  }
   }
 
  
@@ -71,6 +76,7 @@ class RoomPopup extends React.Component {
   }
 
   handleReservation = async() => {
+    const userdata = JSON.parse(sessionStorage.getItem('user'))
     const {user_id, timespot_id, selectedDate} = this.state;
     const data = {
       user_id,
@@ -80,7 +86,11 @@ class RoomPopup extends React.Component {
     }
     const Params = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'access-token': userdata['acces-token'],
+            'uid':userdata['uid'],
+            'expiry':userdata['expiry'],
+            'client':userdata['client']
             },
         body: JSON.stringify(data),
         method: "POST"
@@ -100,7 +110,6 @@ class RoomPopup extends React.Component {
   }
 
   render() {
-    console.log('the state of roompopup',this.state)
     const { selectedDate, reserved, timeButtonText, timespots, timespot_id } = this.state;
     return (
       <Popup trigger={ <button className = "btn btn-outline-dark">Reserve</button> } modal>
