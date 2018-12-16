@@ -11,17 +11,13 @@
 .Sign {
   text-align: center;
   background-color: #24252A;
-  min-height: 92.8vh;
+  min-height: 91.2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(1px + 1.5vmin);
   color: white;
-}
-
-.address-bar{
-  margin-left: 100min;
 }
 
 .default-height{
@@ -103,12 +99,4 @@ border-bottom-color: #fff;
   
   float: right;
 }
-}
-
-
-/*
-* Footer
-*/
-.mastfoot {
-color: rgba(255, 255, 255, .5);
 }

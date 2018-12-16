@@ -7,6 +7,7 @@ import RoomPopup from '../RoomPopup';
 class Room extends React.Component {
 
   render() {
+    const userdata = JSON.parse(sessionStorage.getItem('user'));
     let img = getImage(this.props.id);
     const position = (this.props.id % 2 === 0 ? "col-md-7" : "col-md-7 order-md-2")
     return (
@@ -22,7 +23,8 @@ class Room extends React.Component {
               <p> ✓ For max. <strong>{this.props.capacity} people</strong></p>
               <p> ✓ Room setup: <strong>{this.props.setup}</strong></p>
               <div className = "balanced-button">
-                <RoomPopup name = {this.props.name} id = {this.props.id}/>
+              {(userdata.role === "premium") &&
+               <RoomPopup name = {this.props.name} id = {this.props.id}/>}
               </div>
             </div>
           </div>
