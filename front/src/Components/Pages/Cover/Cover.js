@@ -18,9 +18,6 @@ function Cover() {
       <main role="main" className=" inner cover">
           <h1 className="cover-heading">Welcome to WeWork</h1>
           <p className="lead">WeWork is a full service, creative working environment with a unique entrepreneurial spirit.</p>
-          <p className="lead">
-            <a href="/about" className="btn btn-lg btn-outline-light">Learn more</a>
-          </p>
       </main>
     </div>
   </div>

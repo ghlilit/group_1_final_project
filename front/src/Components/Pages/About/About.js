@@ -1,12 +1,11 @@
 import React from 'react'
+import NavBar from "../../Layout/NavBar"
 
 function About() {
   return (
     <div>
-        <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
-            <a className="navbar-brand nav-main" href="/rooms">WeWork</a>
-        </div>
-        <div className = "Custom default-height"> 
+        <NavBar />
+        <div className = "Custom about-height"> 
             <main role="main" className="container inner cover">
                 <h1 className="Central cover-heading">Who we are</h1>
                 <br />
