@@ -1,21 +1,33 @@
 import React from 'react'
 import history from '../../../browserHist';
-import BookingPopup from '../../Small/BookingPopup';
+// import BookingPopup from '../../Small/BookingPopup';
 
 class NavBar extends React.Component {
   state = {
     userdata: JSON.parse(sessionStorage.getItem('user')),
-    desk:[],
+    deskname:'',
     bookings:[]
 
   }
   getUserData = async()=>{
     let result = await fetch(`http://localhost:4000/users/${this.state.userdata.id}`);
     let data = await result.json()
+    if(data.desk === null){
+      this.setState({
+        deskname:'not assigned'
+      })
+    }
+    else if(data.bookings.length === 0){
+      this.setState({
+        bookings:[]
+      })
+    }
+    else{
     this.setState({
-      desk:data.desk,
+      deskname:data.desk.name,
       bookings:data.bookings,
     })
+  }
   }
   componentDidMount(){
     this.getUserData()
@@ -37,7 +49,7 @@ class NavBar extends React.Component {
     }
   }
   render() {
-    const {userdata,desk} = this.state
+    const {userdata,deskname} = this.state
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
@@ -58,7 +70,7 @@ class NavBar extends React.Component {
             <div className="dropdown-menu">
               <span className="dropdown-item disabled"> {userdata.fname} {userdata.lname}</span>
               <span className="dropdown-item disabled">Membership: {userdata.role}</span>
-              <span className="dropdown-item disabled">Desk name: {desk.name}</span>
+              <span className="dropdown-item disabled">Desk name: {deskname}</span>
               <div className="dropdown-divider"></div>
               <button className="dropdown-item" onClick={()=>{this.signOut()}}>Sign out</button>
             </div>
