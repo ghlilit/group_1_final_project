@@ -1,11 +1,12 @@
 import React from 'react'
 import history from '../../../browserHist';
+import BookingPopup from '../../Small/BookingPopup';
 
 class NavBar extends React.Component {
   state = {
     userdata: JSON.parse(sessionStorage.getItem('user')),
-    desk:{},
-    bookings:{}
+    desk:[],
+    bookings:[]
 
   }
   getUserData = async()=>{
@@ -36,8 +37,7 @@ class NavBar extends React.Component {
     }
   }
   render() {
-    console.log(this.state)
-    const {userdata} = this.state
+    const {userdata,desk} = this.state
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
      <header className="masthead mb-auto ">
@@ -58,7 +58,7 @@ class NavBar extends React.Component {
             <div className="dropdown-menu">
               <span className="dropdown-item disabled"> {userdata.fname} {userdata.lname}</span>
               <span className="dropdown-item disabled">Membership: {userdata.role}</span>
-              <span className="dropdown-item disabled">Desk number: {userdata.id}</span>
+              <span className="dropdown-item disabled">Desk name: {desk.name}</span>
               <div className="dropdown-divider"></div>
               <button className="dropdown-item" onClick={()=>{this.signOut()}}>Sign out</button>
             </div>

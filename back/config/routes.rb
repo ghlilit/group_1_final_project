@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
   get 'timespots', to: 'timespots#index'
   get 'bookings/search/:room_id/:book_date', to: 'bookings#search'
+  get 'bookings/search/:user_id', to: 'bookings#userSearch'
   get 'desks/search/:user_id', to: 'desks#search'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

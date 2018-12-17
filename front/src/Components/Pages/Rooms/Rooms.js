@@ -5,6 +5,7 @@ import Carousel from "../../Small/Carousel"
 import Room from "../../Small/Room"
 import Footer from '../../Layout/Footer';
 import NotFound from "../NotFound"
+import BookingPopup from '../../Small/BookingPopup';
 const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
@@ -13,7 +14,6 @@ class Rooms extends React.Component {
   
   componentDidMount = async () => {
     const userdata = JSON.parse(sessionStorage.getItem('user'));
-    console.log(userdata)  
     let rooms;
       try {
         let result = await fetch(ROOMS);
@@ -25,9 +25,6 @@ class Rooms extends React.Component {
         rooms,
         userdata
       })
-      // if(localStorage.getItem('user')!== null){
-      //   console.log("we have an authenticated user");
-      // }
   }
 
   render() {
@@ -39,6 +36,8 @@ class Rooms extends React.Component {
           <NavBar />
           <Carousel />
           <div className = "container">
+          <hr className="featurette-divider"/>
+            <div className = "text-center"><BookingPopup /></div>
             {rooms.map((room, index) => 
               <Room 
                 key = {room.name + room.id}

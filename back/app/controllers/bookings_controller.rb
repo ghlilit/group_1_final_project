@@ -43,6 +43,11 @@ class BookingsController < ApplicationController
     render json: @bookings
   end
 
+  def userSearch
+    @bookings = Booking.where(user_id: params[:user_id])
+    render json: @bookings
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
