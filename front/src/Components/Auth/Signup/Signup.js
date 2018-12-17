@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { signUp } from '../../../actions';
 import InitialNavBar from '../../Layout/InitialNavBar';
+import NotFound from '../../Pages/NotFound';
 
 class Signup extends React.Component {
     constructor(props) {
@@ -59,10 +60,11 @@ class Signup extends React.Component {
     }
 
   render() {
-      console.log(this.state);
+        const userdata = JSON.parse(sessionStorage.getItem('user'));
       const {auth} = this.props
     return (
-     <div >
+    <div>
+        {!userdata && <div>
        <InitialNavBar />
         <div className="Sign">
             <form className="form-signup" onSubmit={this.handleSubmit}>
@@ -77,7 +79,9 @@ class Signup extends React.Component {
                 <button className="btn btn-lg btn-block btn-outline-light" type="submit">Sign up</button>
             </form>
         </div>
-        </div>
+        </div>}
+     {userdata && <NotFound/>}
+    </div>
     )
   }
 }
