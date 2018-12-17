@@ -19,7 +19,6 @@ class NavBar extends React.Component {
       })
     }
     else{
-      console.log('esia asxatum')
     this.setState({
       deskname:data.desk.name,
       bookings:data.bookings,
