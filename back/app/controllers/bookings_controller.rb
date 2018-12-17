@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   # before_action :authenticate_user!, except:[:index, :show, :search, :create]
-  before_action :set_booking, only: [:show, :update,:search,:destroy]
+  before_action :set_booking, only: [:show, :update,:destroy]
 
   # GET /bookings
   def index
@@ -41,7 +41,6 @@ class BookingsController < ApplicationController
   def search
     @bookings = Booking.where(room_id: params[:room_id], book_date: params[:book_date])
     render json: @bookings
-    #
   end
 
   private

@@ -37,8 +37,9 @@ class RoomPopup extends React.Component {
   getReservedSpots = async(date) => {
     const arr = [];
     let reserved;
+    console.log(`${BOOKINGS}/search/${this.props.id}/${date.toISOString()}`);
     try {
-      let result = await fetch(`${BOOKINGS}/${this.props.id}/${date.toISOString()}`);
+      let result = await fetch(`${BOOKINGS}/search/${this.props.id}/${date.toISOString()}`);
       reserved = await result.json();
     } catch (error) {
       }

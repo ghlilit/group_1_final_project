@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :rooms
   resources :users
   get 'timespots', to: 'timespots#index'
-  get 'bookings/:room_id/:book_date', to: 'bookings#search'
+  get 'bookings/search/:room_id/:book_date', to: 'bookings#search'
   get 'desks/search/:user_id', to: 'desks#search'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
