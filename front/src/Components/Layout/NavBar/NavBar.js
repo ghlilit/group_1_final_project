@@ -12,17 +12,14 @@ class NavBar extends React.Component {
   getUserData = async()=>{
     let result = await fetch(`http://localhost:4000/users/${this.state.userdata.id}`);
     let data = await result.json()
+    console.log(data.desk.name)
     if(data.desk === null){
       this.setState({
         deskname:'not assigned'
       })
     }
-    else if(data.bookings.length === 0){
-      this.setState({
-        bookings:[]
-      })
-    }
     else{
+      console.log('esia asxatum')
     this.setState({
       deskname:data.desk.name,
       bookings:data.bookings,
@@ -49,6 +46,7 @@ class NavBar extends React.Component {
     }
   }
   render() {
+    console.log(this.state)
     const {userdata,deskname} = this.state
     return (
       <div className="cover-container d-flex w-100 h-100 p-2 mx-auto flex-column gray-navbar">
