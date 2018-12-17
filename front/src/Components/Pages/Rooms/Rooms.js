@@ -10,7 +10,7 @@ const ROOMS = "http://localhost:4000/rooms"
 
 class Rooms extends React.Component {
 
-  state = { rooms: [] }
+  state = { rooms: [], update: false }
   
   componentDidMount = async () => {
     const userdata = JSON.parse(sessionStorage.getItem('user'));
@@ -37,7 +37,7 @@ class Rooms extends React.Component {
           <Carousel />
           <div className = "container">
           <hr className="featurette-divider"/>
-            <div className = "text-center"><BookingPopup /></div>
+            <div className = "text-center"><BookingPopup/></div>
             {rooms.map((room, index) => 
               <Room 
                 key = {room.name + room.id}

@@ -108,6 +108,7 @@ class RoomPopup extends React.Component {
       timespot_id: null,
       selectedDate: null
     })
+    this.props.updateComponent()
   }
 
   render() {

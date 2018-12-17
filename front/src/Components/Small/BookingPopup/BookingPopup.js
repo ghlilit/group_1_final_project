@@ -14,15 +14,15 @@ class BookingPopup extends React.Component {
       })
     }
 
-    componentDidMount = async()=> {
+    componentDidMount = async() => {
       this.getData()
     }
 
   render() {
       const {bookings} = this.state;
     return (
-      <div>
-        <Popup trigger={ <button className="btn btn-lg btn-outline-dark" onClick={this.getData()}>My Bookings</button>} modal>
+      <div onClick = {() => this.getData()}>
+        <Popup trigger={ <button className="btn btn-lg btn-outline-dark">My Bookings</button>} modal>
             <div>
                 {bookings.map((booking,index) => 
                     <p key = {index} >{booking.book_date.substr(0,10)} {booking.timespot} {booking.room}</p>)}
