@@ -80,8 +80,7 @@ class User extends React.Component {
   }
 
   render() {
-    const {fname, lname, email} = this.props;
-    const {role} = this.state;
+    const {fname, lname, email, role} = this.props;
     const display = roles.filter(userRole => userRole !== role);
     return (
       <div>
