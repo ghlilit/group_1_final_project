@@ -45,6 +45,7 @@ class Admin extends React.Component {
   componentDidMount = async () => {
     this.getUserData();
   }
+
   signOut = async()=>{
     let result = await fetch('http://localhost:4000/auth/sign_out',{
       method:'DELETE',
@@ -66,18 +67,14 @@ class Admin extends React.Component {
     this.setState({searchTerm: event.target.value})
   }
 
-  onSearchSubmit = () => {
-    const {searchTerm, users} = this.state;
-    const filtered = users.filter(user => 
-    (user.fname.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 ||
-     user.lname.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 ||
-    user.email.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1));
-    this.setState({users: filtered});
-  }
-
   render() {
     const userdata = JSON.parse(sessionStorage.getItem('user'));
-    const {users, searchTerm} = this.state;
+    let {users, searchTerm} = this.state;
+     users = users.filter(user => 
+      (user.fname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       user.lname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      user.email.toLowerCase().includes(searchTerm.toLowerCase())));
+      
     if(!userdata){
       return <NotFound />
     }
@@ -99,15 +96,7 @@ class Admin extends React.Component {
             </div>
             <div className="container my-3 p-3 bg-white rounded shadow-sm">
               <small className="d-block text-right mt-3">
-                <input className = "form-control-sm" type="text" aria-label="Search"  value={searchTerm} onChange = {this.onSearchChange}/>
-                <button className="btn btn-outline-success my-2 my-sm-0"
-                  onClick = {this.onSearchSubmit}>
-                  Search
-                </button>
-                <button className="btn btn-outline-dark my-2 my-sm-0"
-                  onClick = {this.getUserData}>
-                  Clear
-                </button>
+                <input className = "form-control-sm" type="text" aria-label="Search" value={searchTerm} onChange = {this.onSearchChange}/>
               </small>
             <h6 className="border-bottom border-gray pb-2 mb-0">Users</h6>
               {users.map((user, index) => 

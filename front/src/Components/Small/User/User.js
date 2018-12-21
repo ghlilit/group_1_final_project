@@ -4,10 +4,10 @@ const DESKS = "http://localhost:4000/desks"
 const roles = ["nonmember", "regular", "premium", "admin"]
 
 class User extends React.Component {
-  state = {
-    role: this.props.role,
-  }
-  
+    state = {
+      role: this.props.role,
+    }
+
   createDesk = async(name) => {
     const {user_id} = this.props;
     const data = {
@@ -71,7 +71,7 @@ class User extends React.Component {
         const res = await fetch(`${USERS}/${user_id}`, Params);
         const answer = await res.json();
         if(answer){
-          this.setState({role,})
+          this.setState({role, roleChanged: true})
           alert("Change successful")}
       } catch (error) {
           alert("Something went wrong. Try again later.");
@@ -80,7 +80,8 @@ class User extends React.Component {
   }
 
   render() {
-    const {fname, lname, email, role} = this.props;
+    const {fname, lname, email} = this.props;
+     const {role} = this.state;
     const display = roles.filter(userRole => userRole !== role);
     return (
       <div>
