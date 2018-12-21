@@ -102,7 +102,7 @@ class Admin extends React.Component {
               {users.map((user, index) => 
                   <User 
                     user_id = {user.id}
-                    key = {index}
+                    key = {user.email}
                     fname = {user.fname}
                     lname = {user.lname}
                     role = {user.role}
